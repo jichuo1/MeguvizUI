@@ -1,0 +1,9 @@
+MeguvizUI
+Copyright 2026 jichuo1
+
+This project includes the Gradle Wrapper, copyright its original authors,
+distributed under the Apache License, Version 2.0.
+
+Kotlin, AndroidX, JUnit and optional MeguvizRef, MeguvizAndroid and Lumen
+dependencies retain their respective upstream licenses and notices.
+Optional bridge dependencies are not embedded in the MeguvizUI core artifact.

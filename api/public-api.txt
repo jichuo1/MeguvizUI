@@ -1,0 +1,1621 @@
+// JVM public descriptors. Kotlin source contracts are additionally checked by compile fixtures.
+
+public abstract class io.github.jichuo1.meguviz.ui.scheduler.SubmitResult {
+  public io.github.jichuo1.meguviz.ui.scheduler.SubmitResult(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public class io.github.jichuo1.meguviz.ui.widgets.ParentScope<P extends android.view.ViewGroup, LP extends android.view.ViewGroup$LayoutParams> {
+  public io.github.jichuo1.meguviz.ui.widgets.ParentScope(io.github.jichuo1.meguviz.ui.UiSession, P, io.github.jichuo1.meguviz.ui.ParentPolicy<P, LP>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Landroid/view/ViewGroup;Lio/github/jichuo1/meguviz/ui/ParentPolicy;)V
+
+  public final io.github.jichuo1.meguviz.ui.UiSession getSession();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/UiSession;
+
+  public final P getParent();
+    descriptor: ()Landroid/view/ViewGroup;
+
+  public final io.github.jichuo1.meguviz.ui.ParentPolicy<P, LP> getPolicy();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ParentPolicy;
+
+  public final <V extends android.view.View> io.github.jichuo1.meguviz.ui.ViewRef<V> view-F95gukI(java.lang.String, io.github.jichuo1.meguviz.ui.ComponentType<V>, LP, io.github.jichuo1.meguviz.ui.ViewFactory<V>, kotlin.jvm.functions.Function1<? super V, kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ComponentType;Landroid/view/ViewGroup$LayoutParams;Lio/github/jichuo1/meguviz/ui/ViewFactory;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef view-F95gukI$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, io.github.jichuo1.meguviz.ui.ComponentType, android.view.ViewGroup$LayoutParams, io.github.jichuo1.meguviz.ui.ViewFactory, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ComponentType;Landroid/view/ViewGroup$LayoutParams;Lio/github/jichuo1/meguviz/ui/ViewFactory;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final io.github.jichuo1.meguviz.ui.ViewRef<android.widget.TextView> text-p42mYIk(java.lang.String, LP, kotlin.jvm.functions.Function1<? super android.widget.TextView, kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef text-p42mYIk$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, android.view.ViewGroup$LayoutParams, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final io.github.jichuo1.meguviz.ui.ViewRef<android.widget.EditText> edit-p42mYIk(java.lang.String, LP, kotlin.jvm.functions.Function1<? super android.widget.EditText, kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef edit-p42mYIk$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, android.view.ViewGroup$LayoutParams, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final io.github.jichuo1.meguviz.ui.ViewRef<android.widget.Button> button-p42mYIk(java.lang.String, LP, kotlin.jvm.functions.Function1<? super android.widget.Button, kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef button-p42mYIk$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, android.view.ViewGroup$LayoutParams, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final io.github.jichuo1.meguviz.ui.ViewRef<android.widget.ImageView> image-p42mYIk(java.lang.String, LP, kotlin.jvm.functions.Function1<? super android.widget.ImageView, kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef image-p42mYIk$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, android.view.ViewGroup$LayoutParams, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final io.github.jichuo1.meguviz.ui.ViewRef<android.widget.LinearLayout> linear-FlNAiQg(java.lang.String, LP, kotlin.jvm.functions.Function1<? super android.widget.LinearLayout, kotlin.Unit>, kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.widgets.LinearScope, kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef linear-FlNAiQg$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, android.view.ViewGroup$LayoutParams, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final io.github.jichuo1.meguviz.ui.ViewRef<android.widget.FrameLayout> frame-FlNAiQg(java.lang.String, LP, kotlin.jvm.functions.Function1<? super android.widget.FrameLayout, kotlin.Unit>, kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.widgets.FrameScope, kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef frame-FlNAiQg$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, android.view.ViewGroup$LayoutParams, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+}
+
+public final class io.github.jichuo1.meguviz.ui.BindingToken {
+  public io.github.jichuo1.meguviz.ui.BindingToken(kotlin.jvm.functions.Function0<java.lang.Boolean>);
+    descriptor: (Lkotlin/jvm/functions/Function0;)V
+
+  public final kotlin.jvm.functions.Function0<java.lang.Boolean> getCurrent$ui_core();
+    descriptor: ()Lkotlin/jvm/functions/Function0;
+
+  public final boolean isCurrent();
+    descriptor: ()Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.CloseRequest {
+  public io.github.jichuo1.meguviz.ui.CloseRequest();
+    descriptor: ()V
+
+  public final boolean getCompleted();
+    descriptor: ()Z
+
+  public final void setCompleted$ui_core(boolean);
+    descriptor: (Z)V
+
+  public final java.lang.Throwable getFailure();
+    descriptor: ()Ljava/lang/Throwable;
+
+  public final void setFailure$ui_core(java.lang.Throwable);
+    descriptor: (Ljava/lang/Throwable;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.ComponentType<V extends android.view.View> {
+  public io.github.jichuo1.meguviz.ui.ComponentType(java.lang.String, java.lang.Class<V>, int);
+    descriptor: (Ljava/lang/String;Ljava/lang/Class;I)V
+
+  public io.github.jichuo1.meguviz.ui.ComponentType(java.lang.String, java.lang.Class, int, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Ljava/lang/String;Ljava/lang/Class;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final java.lang.String getId();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.Class<V> getViewClass();
+    descriptor: ()Ljava/lang/Class;
+
+  public final int getSchema();
+    descriptor: ()I
+}
+
+public final class io.github.jichuo1.meguviz.ui.CreationEnvironment {
+  public io.github.jichuo1.meguviz.ui.CreationEnvironment(android.content.Context, java.lang.String, io.github.jichuo1.meguviz.ui.ResourceAuthority);
+    descriptor: (Landroid/content/Context;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ResourceAuthority;)V
+
+  public io.github.jichuo1.meguviz.ui.CreationEnvironment(android.content.Context, java.lang.String, io.github.jichuo1.meguviz.ui.ResourceAuthority, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Landroid/content/Context;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ResourceAuthority;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final android.content.Context getContext();
+    descriptor: ()Landroid/content/Context;
+
+  public final java.lang.String getResourceOwner();
+    descriptor: ()Ljava/lang/String;
+
+  public final io.github.jichuo1.meguviz.ui.ResourceAuthority getResourceAuthority();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ResourceAuthority;
+}
+
+public final class io.github.jichuo1.meguviz.ui.EffectMask {
+  public static final io.github.jichuo1.meguviz.ui.EffectMask$Companion Companion;
+    descriptor: Lio/github/jichuo1/meguviz/ui/EffectMask$Companion;
+  public final int getBits();
+    descriptor: ()I
+
+  public static final int or-lLoTXEg(int, int);
+    descriptor: (II)I
+
+  public static java.lang.String toString-impl(int);
+    descriptor: (I)Ljava/lang/String;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public static int hashCode-impl(int);
+    descriptor: (I)I
+
+  public int hashCode();
+    descriptor: ()I
+
+  public static boolean equals-impl(int, java.lang.Object);
+    descriptor: (ILjava/lang/Object;)Z
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+
+  public static int constructor-impl(int);
+    descriptor: (I)I
+
+  public static final io.github.jichuo1.meguviz.ui.EffectMask box-impl(int);
+    descriptor: (I)Lio/github/jichuo1/meguviz/ui/EffectMask;
+
+  public final int unbox-impl();
+    descriptor: ()I
+
+  public static final boolean equals-impl0(int, int);
+    descriptor: (II)Z
+
+  public static final int access$getPAINT$cp();
+    descriptor: ()I
+
+  public static final int access$getLAYOUT$cp();
+    descriptor: ()I
+
+  public static final int access$getSTRUCTURE$cp();
+    descriptor: ()I
+
+  public static final int access$getSEMANTICS$cp();
+    descriptor: ()I
+
+  public static final int access$getCONSERVATIVE$cp();
+    descriptor: ()I
+}
+
+public final class io.github.jichuo1.meguviz.ui.EffectMask$Companion {
+  public final int getPAINT-02Xv2CM();
+    descriptor: ()I
+
+  public final int getLAYOUT-02Xv2CM();
+    descriptor: ()I
+
+  public final int getSTRUCTURE-02Xv2CM();
+    descriptor: ()I
+
+  public final int getSEMANTICS-02Xv2CM();
+    descriptor: ()I
+
+  public final int getCONSERVATIVE-02Xv2CM();
+    descriptor: ()I
+
+  public io.github.jichuo1.meguviz.ui.EffectMask$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.EpochDomain {
+  public io.github.jichuo1.meguviz.ui.EpochDomain();
+    descriptor: ()V
+
+  public final io.github.jichuo1.meguviz.ui.EpochToken token();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/EpochToken;
+
+  public final void advance();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.EpochToken {
+  public io.github.jichuo1.meguviz.ui.EpochToken(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)V
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+
+  public int hashCode();
+    descriptor: ()I
+}
+
+public final class io.github.jichuo1.meguviz.ui.NativeOwnership extends java.lang.Enum<io.github.jichuo1.meguviz.ui.NativeOwnership> {
+  public static final io.github.jichuo1.meguviz.ui.NativeOwnership CREATED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/NativeOwnership;
+  public static final io.github.jichuo1.meguviz.ui.NativeOwnership BORROWED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/NativeOwnership;
+  public static final io.github.jichuo1.meguviz.ui.NativeOwnership TRANSFERRED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/NativeOwnership;
+  public static io.github.jichuo1.meguviz.ui.NativeOwnership[] values();
+    descriptor: ()[Lio/github/jichuo1/meguviz/ui/NativeOwnership;
+
+  public static io.github.jichuo1.meguviz.ui.NativeOwnership valueOf(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/NativeOwnership;
+
+  public static kotlin.enums.EnumEntries<io.github.jichuo1.meguviz.ui.NativeOwnership> getEntries();
+    descriptor: ()Lkotlin/enums/EnumEntries;
+}
+
+public final class io.github.jichuo1.meguviz.ui.ParentPolicy$DefaultImpls {
+  public static <P extends android.view.ViewGroup, LP extends android.view.ViewGroup$LayoutParams> void attach(io.github.jichuo1.meguviz.ui.ParentPolicy<P, LP>, P, android.view.View, LP);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ParentPolicy;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.PropertyBinding$WhenMappings {
+  public static final int[] $EnumSwitchMapping$0;
+    descriptor: [I
+}
+
+public final class io.github.jichuo1.meguviz.ui.PropertyBinding<V extends android.view.View, T> implements java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.PropertyBinding(io.github.jichuo1.meguviz.ui.ViewRef<V>, io.github.jichuo1.meguviz.ui.PropertySpec<V, T>, kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;Lio/github/jichuo1/meguviz/ui/PropertySpec;Lkotlin/jvm/functions/Function0;)V
+
+  public final long getWrites();
+    descriptor: ()J
+
+  public final long getSkips();
+    descriptor: ()J
+
+  public final void invalidate();
+    descriptor: ()V
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SubmitResult submit(T);
+    descriptor: (Ljava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.ScheduledOperation operation(T);
+    descriptor: (Ljava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/ScheduledOperation;
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.PropertyOwnership extends java.lang.Enum<io.github.jichuo1.meguviz.ui.PropertyOwnership> {
+  public static final io.github.jichuo1.meguviz.ui.PropertyOwnership EXCLUSIVE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/PropertyOwnership;
+  public static final io.github.jichuo1.meguviz.ui.PropertyOwnership SHARED_READ;
+    descriptor: Lio/github/jichuo1/meguviz/ui/PropertyOwnership;
+  public static final io.github.jichuo1.meguviz.ui.PropertyOwnership ALWAYS_WRITE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/PropertyOwnership;
+  public static io.github.jichuo1.meguviz.ui.PropertyOwnership[] values();
+    descriptor: ()[Lio/github/jichuo1/meguviz/ui/PropertyOwnership;
+
+  public static io.github.jichuo1.meguviz.ui.PropertyOwnership valueOf(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/PropertyOwnership;
+
+  public static kotlin.enums.EnumEntries<io.github.jichuo1.meguviz.ui.PropertyOwnership> getEntries();
+    descriptor: ()Lkotlin/enums/EnumEntries;
+}
+
+public final class io.github.jichuo1.meguviz.ui.PropertySpec<V extends android.view.View, T> {
+  public io.github.jichuo1.meguviz.ui.PropertySpec(java.lang.String, int, io.github.jichuo1.meguviz.ui.PropertyOwnership, boolean, kotlin.jvm.functions.Function2, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, boolean, kotlin.jvm.functions.Function2, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Ljava/lang/String;ILio/github/jichuo1/meguviz/ui/PropertyOwnership;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ZLkotlin/jvm/functions/Function2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final java.lang.String getId();
+    descriptor: ()Ljava/lang/String;
+
+  public final int getEffect-02Xv2CM();
+    descriptor: ()I
+
+  public final io.github.jichuo1.meguviz.ui.PropertyOwnership getOwnership();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/PropertyOwnership;
+
+  public final boolean getCoalescible();
+    descriptor: ()Z
+
+  public final kotlin.jvm.functions.Function2<T, T, java.lang.Boolean> getEquivalent();
+    descriptor: ()Lkotlin/jvm/functions/Function2;
+
+  public final kotlin.jvm.functions.Function1<T, T> getSnapshot();
+    descriptor: ()Lkotlin/jvm/functions/Function1;
+
+  public final kotlin.jvm.functions.Function1<V, T> getRead();
+    descriptor: ()Lkotlin/jvm/functions/Function1;
+
+  public final kotlin.jvm.functions.Function1<V, java.lang.Boolean> getComparisonAllowed();
+    descriptor: ()Lkotlin/jvm/functions/Function1;
+
+  public final boolean getResourceSensitive();
+    descriptor: ()Z
+
+  public final kotlin.jvm.functions.Function2<V, T, kotlin.Unit> getWrite();
+    descriptor: ()Lkotlin/jvm/functions/Function2;
+
+  public io.github.jichuo1.meguviz.ui.PropertySpec(java.lang.String, int, io.github.jichuo1.meguviz.ui.PropertyOwnership, boolean, kotlin.jvm.functions.Function2, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, boolean, kotlin.jvm.functions.Function2, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Ljava/lang/String;ILio/github/jichuo1/meguviz/ui/PropertyOwnership;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ZLkotlin/jvm/functions/Function2;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.ResourceAuthority {
+  public io.github.jichuo1.meguviz.ui.ResourceAuthority(kotlin.jvm.functions.Function0<? extends java.lang.Object>, kotlin.jvm.functions.Function1<java.lang.Object, java.lang.Boolean>);
+    descriptor: (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+
+  public final kotlin.jvm.functions.Function0<java.lang.Object> getCapture();
+    descriptor: ()Lkotlin/jvm/functions/Function0;
+
+  public final kotlin.jvm.functions.Function1<java.lang.Object, java.lang.Boolean> isCurrent();
+    descriptor: ()Lkotlin/jvm/functions/Function1;
+}
+
+public final class io.github.jichuo1.meguviz.ui.SessionState extends java.lang.Enum<io.github.jichuo1.meguviz.ui.SessionState> {
+  public static final io.github.jichuo1.meguviz.ui.SessionState ACTIVE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/SessionState;
+  public static final io.github.jichuo1.meguviz.ui.SessionState DETACHED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/SessionState;
+  public static final io.github.jichuo1.meguviz.ui.SessionState DISPOSED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/SessionState;
+  public static io.github.jichuo1.meguviz.ui.SessionState[] values();
+    descriptor: ()[Lio/github/jichuo1/meguviz/ui/SessionState;
+
+  public static io.github.jichuo1.meguviz.ui.SessionState valueOf(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/SessionState;
+
+  public static kotlin.enums.EnumEntries<io.github.jichuo1.meguviz.ui.SessionState> getEntries();
+    descriptor: ()Lkotlin/enums/EnumEntries;
+}
+
+public final class io.github.jichuo1.meguviz.ui.UiSession implements java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.UiSession(io.github.jichuo1.meguviz.ui.CreationEnvironment, io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/CreationEnvironment;Lio/github/jichuo1/meguviz/ui/scheduler/UiFrameDriver;)V
+
+  public io.github.jichuo1.meguviz.ui.UiSession(io.github.jichuo1.meguviz.ui.CreationEnvironment, io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/CreationEnvironment;Lio/github/jichuo1/meguviz/ui/scheduler/UiFrameDriver;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final io.github.jichuo1.meguviz.ui.CreationEnvironment getEnvironment();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/CreationEnvironment;
+
+  public final io.github.jichuo1.meguviz.ui.SessionState getState();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/SessionState;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.UiScheduler getScheduler();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/scheduler/UiScheduler;
+
+  public final void assertOwner();
+    descriptor: ()V
+
+  public final <P extends android.view.ViewGroup, LP extends android.view.ViewGroup$LayoutParams, V extends android.view.View> io.github.jichuo1.meguviz.ui.ViewRef<V> mount-7B15oVw(P, io.github.jichuo1.meguviz.ui.ParentPolicy<P, LP>, java.lang.String, io.github.jichuo1.meguviz.ui.ComponentType<V>, LP, io.github.jichuo1.meguviz.ui.ViewFactory<V>, kotlin.jvm.functions.Function1<? super V, kotlin.Unit>);
+    descriptor: (Landroid/view/ViewGroup;Lio/github/jichuo1/meguviz/ui/ParentPolicy;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ComponentType;Landroid/view/ViewGroup$LayoutParams;Lio/github/jichuo1/meguviz/ui/ViewFactory;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef mount-7B15oVw$default(io.github.jichuo1.meguviz.ui.UiSession, android.view.ViewGroup, io.github.jichuo1.meguviz.ui.ParentPolicy, java.lang.String, io.github.jichuo1.meguviz.ui.ComponentType, android.view.ViewGroup$LayoutParams, io.github.jichuo1.meguviz.ui.ViewFactory, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Landroid/view/ViewGroup;Lio/github/jichuo1/meguviz/ui/ParentPolicy;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ComponentType;Landroid/view/ViewGroup$LayoutParams;Lio/github/jichuo1/meguviz/ui/ViewFactory;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final <V extends android.view.View> io.github.jichuo1.meguviz.ui.ViewRef<V> borrow-sZbnFR8(V, java.lang.String, io.github.jichuo1.meguviz.ui.ComponentType<V>);
+    descriptor: (Landroid/view/View;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ComponentType;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final <P extends android.view.ViewGroup, LP extends android.view.ViewGroup$LayoutParams, V extends android.view.View> io.github.jichuo1.meguviz.ui.ViewRef<V> transfer-yPgVsW8(V, P, io.github.jichuo1.meguviz.ui.ParentPolicy<P, LP>, LP, java.lang.String, io.github.jichuo1.meguviz.ui.ComponentType<V>);
+    descriptor: (Landroid/view/View;Landroid/view/ViewGroup;Lio/github/jichuo1/meguviz/ui/ParentPolicy;Landroid/view/ViewGroup$LayoutParams;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ComponentType;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final io.github.jichuo1.meguviz.ui.ViewRef<android.view.View> inflate-QXljEvY(android.view.LayoutInflater, int, android.view.ViewGroup, java.lang.String);
+    descriptor: (Landroid/view/LayoutInflater;ILandroid/view/ViewGroup;Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public final <V extends android.view.View> V resolve$ui_core(io.github.jichuo1.meguviz.ui.ViewRef<V>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;)Landroid/view/View;
+
+  public final <V extends android.view.View> io.github.jichuo1.meguviz.ui.BindingToken token(io.github.jichuo1.meguviz.ui.ViewRef<V>, boolean);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;Z)Lio/github/jichuo1/meguviz/ui/BindingToken;
+
+  public static io.github.jichuo1.meguviz.ui.BindingToken token$default(io.github.jichuo1.meguviz.ui.UiSession, io.github.jichuo1.meguviz.ui.ViewRef, boolean, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Lio/github/jichuo1/meguviz/ui/ViewRef;ZILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/BindingToken;
+
+  public final <V extends android.view.View, T> io.github.jichuo1.meguviz.ui.PropertyBinding<V, T> bind(io.github.jichuo1.meguviz.ui.ViewRef<V>, io.github.jichuo1.meguviz.ui.PropertySpec<V, T>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;Lio/github/jichuo1/meguviz/ui/PropertySpec;)Lio/github/jichuo1/meguviz/ui/PropertyBinding;
+
+  public final <V extends android.view.View> java.lang.AutoCloseable reserveProperties(io.github.jichuo1.meguviz.ui.ViewRef<V>, java.util.Set<java.lang.String>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;Ljava/util/Set;)Ljava/lang/AutoCloseable;
+
+  public final <V extends android.view.View> void onRelease(io.github.jichuo1.meguviz.ui.ViewRef<V>, kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;Lkotlin/jvm/functions/Function0;)V
+
+  public final void onClose(kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function0;)V
+
+  public final <V extends android.view.View> java.lang.AutoCloseable click(io.github.jichuo1.meguviz.ui.ViewRef<V>, kotlin.jvm.functions.Function1<? super V, kotlin.Unit>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;Lkotlin/jvm/functions/Function1;)Ljava/lang/AutoCloseable;
+
+  public final void rebind(io.github.jichuo1.meguviz.ui.ViewRef<?>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;)V
+
+  public final void detach();
+    descriptor: ()V
+
+  public final void reattach();
+    descriptor: ()V
+
+  public final void invalidateTheme();
+    descriptor: ()V
+
+  public final void invalidateResources();
+    descriptor: ()V
+
+  public final void release(io.github.jichuo1.meguviz.ui.ViewRef<?>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;)V
+
+  public final io.github.jichuo1.meguviz.ui.CloseRequest requestClose();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/CloseRequest;
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.ViewKey {
+  public final java.lang.String getValue();
+    descriptor: ()Ljava/lang/String;
+
+  public static java.lang.String toString-impl(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public static int hashCode-impl(java.lang.String);
+    descriptor: (Ljava/lang/String;)I
+
+  public int hashCode();
+    descriptor: ()I
+
+  public static boolean equals-impl(java.lang.String, java.lang.Object);
+    descriptor: (Ljava/lang/String;Ljava/lang/Object;)Z
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+
+  public static java.lang.String constructor-impl(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ljava/lang/String;
+
+  public static final io.github.jichuo1.meguviz.ui.ViewKey box-impl(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/ViewKey;
+
+  public final java.lang.String unbox-impl();
+    descriptor: ()Ljava/lang/String;
+
+  public static final boolean equals-impl0(java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.ViewRef<V extends android.view.View> {
+  public final io.github.jichuo1.meguviz.ui.UiSession getSession$ui_core();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/UiSession;
+
+  public final long getIdentity$ui_core();
+    descriptor: ()J
+
+  public final java.lang.String getKey-mgS8iU0();
+    descriptor: ()Ljava/lang/String;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<V> getComponent();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final V get();
+    descriptor: ()Landroid/view/View;
+
+  public final io.github.jichuo1.meguviz.ui.BindingToken token(boolean);
+    descriptor: (Z)Lio/github/jichuo1/meguviz/ui/BindingToken;
+
+  public static io.github.jichuo1.meguviz.ui.BindingToken token$default(io.github.jichuo1.meguviz.ui.ViewRef, boolean, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;ZILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/BindingToken;
+
+  public io.github.jichuo1.meguviz.ui.ViewRef(io.github.jichuo1.meguviz.ui.UiSession, long, java.lang.String, io.github.jichuo1.meguviz.ui.ComponentType, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;JLjava/lang/String;Lio/github/jichuo1/meguviz/ui/ComponentType;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor {
+  public io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor(java.lang.String, java.lang.String, int, int, java.util.Set<java.lang.String>, java.util.Set<java.lang.String>, java.util.Set<java.lang.String>, int, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;IILjava/util/Set;Ljava/util/Set;Ljava/util/Set;ILjava/lang/String;Ljava/lang/String;)V
+
+  public io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor(java.lang.String, java.lang.String, int, int, java.util.Set, java.util.Set, java.util.Set, int, java.lang.String, java.lang.String, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;IILjava/util/Set;Ljava/util/Set;Ljava/util/Set;ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final java.lang.String getId();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String getVersion();
+    descriptor: ()Ljava/lang/String;
+
+  public final int getSpiMajor();
+    descriptor: ()I
+
+  public final int getSpiMinor();
+    descriptor: ()I
+
+  public final java.util.Set<java.lang.String> getRequiredCapabilities();
+    descriptor: ()Ljava/util/Set;
+
+  public final java.util.Set<java.lang.String> getDependencies();
+    descriptor: ()Ljava/util/Set;
+
+  public final java.util.Set<java.lang.String> getOverrides();
+    descriptor: ()Ljava/util/Set;
+
+  public final int getPriority();
+    descriptor: ()I
+
+  public final java.lang.String getThread();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String getLifetime();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component1();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component2();
+    descriptor: ()Ljava/lang/String;
+
+  public final int component3();
+    descriptor: ()I
+
+  public final int component4();
+    descriptor: ()I
+
+  public final java.util.Set<java.lang.String> component5();
+    descriptor: ()Ljava/util/Set;
+
+  public final java.util.Set<java.lang.String> component6();
+    descriptor: ()Ljava/util/Set;
+
+  public final java.util.Set<java.lang.String> component7();
+    descriptor: ()Ljava/util/Set;
+
+  public final int component8();
+    descriptor: ()I
+
+  public final java.lang.String component9();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component10();
+    descriptor: ()Ljava/lang/String;
+
+  public final io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor copy(java.lang.String, java.lang.String, int, int, java.util.Set<java.lang.String>, java.util.Set<java.lang.String>, java.util.Set<java.lang.String>, int, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;IILjava/util/Set;Ljava/util/Set;Ljava/util/Set;ILjava/lang/String;Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/extensions/ExtensionDescriptor;
+
+  public static io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor copy$default(io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor, java.lang.String, java.lang.String, int, int, java.util.Set, java.util.Set, java.util.Set, int, java.lang.String, java.lang.String, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/extensions/ExtensionDescriptor;Ljava/lang/String;Ljava/lang/String;IILjava/util/Set;Ljava/util/Set;Ljava/util/Set;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/extensions/ExtensionDescriptor;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.extensions.FactoryRegistration<V extends android.view.View> {
+  public io.github.jichuo1.meguviz.ui.extensions.FactoryRegistration(io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor, io.github.jichuo1.meguviz.ui.ComponentType<V>, io.github.jichuo1.meguviz.ui.ViewFactory<V>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/extensions/ExtensionDescriptor;Lio/github/jichuo1/meguviz/ui/ComponentType;Lio/github/jichuo1/meguviz/ui/ViewFactory;)V
+
+  public final io.github.jichuo1.meguviz.ui.extensions.ExtensionDescriptor getDescriptor();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/extensions/ExtensionDescriptor;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<V> getType();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<V> getFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+}
+
+public final class io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot {
+  public static final io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot$Companion Companion;
+    descriptor: Lio/github/jichuo1/meguviz/ui/extensions/RegistrySnapshot$Companion;
+  public final long getCandidateChecks();
+    descriptor: ()J
+
+  public final <V extends android.view.View> io.github.jichuo1.meguviz.ui.extensions.ResolvedBinding<V> resolve(io.github.jichuo1.meguviz.ui.ComponentType<V>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ComponentType;)Lio/github/jichuo1/meguviz/ui/extensions/ResolvedBinding;
+
+  public io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot(java.util.Map, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot$Companion {
+  public final io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot install(java.util.List<? extends io.github.jichuo1.meguviz.ui.extensions.FactoryRegistration<?>>, java.util.Set<java.lang.String>);
+    descriptor: (Ljava/util/List;Ljava/util/Set;)Lio/github/jichuo1/meguviz/ui/extensions/RegistrySnapshot;
+
+  public static io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot install$default(io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot$Companion, java.util.List, java.util.Set, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/extensions/RegistrySnapshot$Companion;Ljava/util/List;Ljava/util/Set;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/extensions/RegistrySnapshot;
+
+  public io.github.jichuo1.meguviz.ui.extensions.RegistrySnapshot$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.extensions.ResolvedBinding<V extends android.view.View> implements io.github.jichuo1.meguviz.ui.ViewFactory<V> {
+  public io.github.jichuo1.meguviz.ui.extensions.ResolvedBinding(io.github.jichuo1.meguviz.ui.ComponentType<V>, java.lang.String, io.github.jichuo1.meguviz.ui.ViewFactory<V>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ComponentType;Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ViewFactory;)V
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<V> getType();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final java.lang.String getProviderId();
+    descriptor: ()Ljava/lang/String;
+
+  public V create(io.github.jichuo1.meguviz.ui.CreationEnvironment);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/CreationEnvironment;)Landroid/view/View;
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.ChoreographerFrameDriver implements io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver {
+  public io.github.jichuo1.meguviz.ui.scheduler.ChoreographerFrameDriver();
+    descriptor: ()V
+
+  public java.lang.String getOwner();
+    descriptor: ()Ljava/lang/String;
+
+  public io.github.jichuo1.meguviz.ui.scheduler.FrameTicket requestFrame(kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.scheduler.FrameBudget, kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/scheduler/FrameTicket;
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.FrameBudget {
+  public io.github.jichuo1.meguviz.ui.scheduler.FrameBudget(long, java.lang.Long, boolean, java.lang.String);
+    descriptor: (JLjava/lang/Long;ZLjava/lang/String;)V
+
+  public io.github.jichuo1.meguviz.ui.scheduler.FrameBudget(long, java.lang.Long, boolean, java.lang.String, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (JLjava/lang/Long;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final long getFrameTimeNanos();
+    descriptor: ()J
+
+  public final java.lang.Long getDeadlineNanos();
+    descriptor: ()Ljava/lang/Long;
+
+  public final boolean getEstimated();
+    descriptor: ()Z
+
+  public final java.lang.String getSource();
+    descriptor: ()Ljava/lang/String;
+
+  public final long component1();
+    descriptor: ()J
+
+  public final java.lang.Long component2();
+    descriptor: ()Ljava/lang/Long;
+
+  public final boolean component3();
+    descriptor: ()Z
+
+  public final java.lang.String component4();
+    descriptor: ()Ljava/lang/String;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.FrameBudget copy(long, java.lang.Long, boolean, java.lang.String);
+    descriptor: (JLjava/lang/Long;ZLjava/lang/String;)Lio/github/jichuo1/meguviz/ui/scheduler/FrameBudget;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.FrameBudget copy$default(io.github.jichuo1.meguviz.ui.scheduler.FrameBudget, long, java.lang.Long, boolean, java.lang.String, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/FrameBudget;JLjava/lang/Long;ZLjava/lang/String;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/FrameBudget;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.RejectionReason extends java.lang.Enum<io.github.jichuo1.meguviz.ui.scheduler.RejectionReason> {
+  public static final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason PAUSED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason FAULTED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason CLOSED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason STATE_CAPACITY;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason COMMAND_CAPACITY;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason EMPTY_BATCH;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+  public static io.github.jichuo1.meguviz.ui.scheduler.RejectionReason[] values();
+    descriptor: ()[Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.RejectionReason valueOf(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+
+  public static kotlin.enums.EnumEntries<io.github.jichuo1.meguviz.ui.scheduler.RejectionReason> getEntries();
+    descriptor: ()Lkotlin/enums/EnumEntries;
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.ScheduledOperation {
+  public io.github.jichuo1.meguviz.ui.scheduler.ScheduledOperation(java.lang.String, kotlin.jvm.functions.Function0<java.lang.Boolean>, kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)V
+
+  public io.github.jichuo1.meguviz.ui.scheduler.ScheduledOperation(java.lang.String, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Ljava/lang/String;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final java.lang.String getLabel();
+    descriptor: ()Ljava/lang/String;
+
+  public final kotlin.jvm.functions.Function0<java.lang.Boolean> isValid();
+    descriptor: ()Lkotlin/jvm/functions/Function0;
+
+  public final kotlin.jvm.functions.Function0<kotlin.Unit> getAction();
+    descriptor: ()Lkotlin/jvm/functions/Function0;
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.SchedulerCounters {
+  public io.github.jichuo1.meguviz.ui.scheduler.SchedulerCounters(long, long, long, long, long, long, long, long);
+    descriptor: (JJJJJJJJ)V
+
+  public final long getAcceptedSubmissions();
+    descriptor: ()J
+
+  public final long getCoalescedStates();
+    descriptor: ()J
+
+  public final long getAppliedOperations();
+    descriptor: ()J
+
+  public final long getStaleOperations();
+    descriptor: ()J
+
+  public final long getReleasedOperations();
+    descriptor: ()J
+
+  public final long getRejectedSubmissions();
+    descriptor: ()J
+
+  public final long getRequestedFrames();
+    descriptor: ()J
+
+  public final long getDrainedFrames();
+    descriptor: ()J
+
+  public final long component1();
+    descriptor: ()J
+
+  public final long component2();
+    descriptor: ()J
+
+  public final long component3();
+    descriptor: ()J
+
+  public final long component4();
+    descriptor: ()J
+
+  public final long component5();
+    descriptor: ()J
+
+  public final long component6();
+    descriptor: ()J
+
+  public final long component7();
+    descriptor: ()J
+
+  public final long component8();
+    descriptor: ()J
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SchedulerCounters copy(long, long, long, long, long, long, long, long);
+    descriptor: (JJJJJJJJ)Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerCounters;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.SchedulerCounters copy$default(io.github.jichuo1.meguviz.ui.scheduler.SchedulerCounters, long, long, long, long, long, long, long, long, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerCounters;JJJJJJJJILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerCounters;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.SchedulerFailure {
+  public io.github.jichuo1.meguviz.ui.scheduler.SchedulerFailure(java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+  public final java.lang.String getOperation();
+    descriptor: ()Ljava/lang/String;
+
+  public final int getOperationIndex();
+    descriptor: ()I
+
+  public final int getAppliedInBatch();
+    descriptor: ()I
+
+  public final java.lang.String getPhase();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String getExceptionType();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String getMessage();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component1();
+    descriptor: ()Ljava/lang/String;
+
+  public final int component2();
+    descriptor: ()I
+
+  public final int component3();
+    descriptor: ()I
+
+  public final java.lang.String component4();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component5();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component6();
+    descriptor: ()Ljava/lang/String;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SchedulerFailure copy(java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String);
+    descriptor: (Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerFailure;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.SchedulerFailure copy$default(io.github.jichuo1.meguviz.ui.scheduler.SchedulerFailure, java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerFailure;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerFailure;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.SchedulerState extends java.lang.Enum<io.github.jichuo1.meguviz.ui.scheduler.SchedulerState> {
+  public static final io.github.jichuo1.meguviz.ui.scheduler.SchedulerState ACTIVE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerState;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.SchedulerState PAUSED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerState;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.SchedulerState FAULTED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerState;
+  public static final io.github.jichuo1.meguviz.ui.scheduler.SchedulerState CLOSED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerState;
+  public static io.github.jichuo1.meguviz.ui.scheduler.SchedulerState[] values();
+    descriptor: ()[Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerState;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.SchedulerState valueOf(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerState;
+
+  public static kotlin.enums.EnumEntries<io.github.jichuo1.meguviz.ui.scheduler.SchedulerState> getEntries();
+    descriptor: ()Lkotlin/enums/EnumEntries;
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.StateSlot {
+  public io.github.jichuo1.meguviz.ui.scheduler.StateSlot(java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;)V
+
+  public final java.lang.Object getBinding();
+    descriptor: ()Ljava/lang/Object;
+
+  public final java.lang.Object getProperty();
+    descriptor: ()Ljava/lang/Object;
+
+  public final java.lang.Object component1();
+    descriptor: ()Ljava/lang/Object;
+
+  public final java.lang.Object component2();
+    descriptor: ()Ljava/lang/Object;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.StateSlot copy(java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;Ljava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/StateSlot;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.StateSlot copy$default(io.github.jichuo1.meguviz.ui.scheduler.StateSlot, java.lang.Object, java.lang.Object, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/StateSlot;Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/StateSlot;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Accepted extends io.github.jichuo1.meguviz.ui.scheduler.SubmitResult {
+  public static final io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Accepted INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult$Accepted;
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Coalesced extends io.github.jichuo1.meguviz.ui.scheduler.SubmitResult {
+  public static final io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Coalesced INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult$Coalesced;
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Rejected extends io.github.jichuo1.meguviz.ui.scheduler.SubmitResult {
+  public io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Rejected(io.github.jichuo1.meguviz.ui.scheduler.RejectionReason);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;)V
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason getReason();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.RejectionReason component1();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Rejected copy(io.github.jichuo1.meguviz.ui.scheduler.RejectionReason);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult$Rejected;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Rejected copy$default(io.github.jichuo1.meguviz.ui.scheduler.SubmitResult$Rejected, io.github.jichuo1.meguviz.ui.scheduler.RejectionReason, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult$Rejected;Lio/github/jichuo1/meguviz/ui/scheduler/RejectionReason;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult$Rejected;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.UiScheduler implements java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.scheduler.UiScheduler(io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver, kotlin.jvm.functions.Function0<kotlin.Unit>, int, int, int, long, kotlin.jvm.functions.Function0<java.lang.Long>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/UiFrameDriver;Lkotlin/jvm/functions/Function0;IIIJLkotlin/jvm/functions/Function0;)V
+
+  public io.github.jichuo1.meguviz.ui.scheduler.UiScheduler(io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver, kotlin.jvm.functions.Function0, int, int, int, long, kotlin.jvm.functions.Function0, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/UiFrameDriver;Lkotlin/jvm/functions/Function0;IIIJLkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final int getStateCapacity();
+    descriptor: ()I
+
+  public final int getCommandCapacity();
+    descriptor: ()I
+
+  public final int getMaxOperationsPerFrame();
+    descriptor: ()I
+
+  public final long getMaxFrameWorkNanos();
+    descriptor: ()J
+
+  public final java.lang.String getDriverOwner();
+    descriptor: ()Ljava/lang/String;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SchedulerState getState();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerState;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SchedulerFailure getFailure();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerFailure;
+
+  public final java.lang.String getCancellationFailure();
+    descriptor: ()Ljava/lang/String;
+
+  public final int getPendingStateCount();
+    descriptor: ()I
+
+  public final int getPendingCommandCount();
+    descriptor: ()I
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SchedulerCounters getCounters();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/scheduler/SchedulerCounters;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SubmitResult submitState(java.lang.Object, kotlin.jvm.functions.Function0<java.lang.Boolean>, kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Ljava/lang/Object;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.SubmitResult submitState$default(io.github.jichuo1.meguviz.ui.scheduler.UiScheduler, java.lang.Object, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/UiScheduler;Ljava/lang/Object;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SubmitResult submitCommand(kotlin.jvm.functions.Function0<java.lang.Boolean>, kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult;
+
+  public static io.github.jichuo1.meguviz.ui.scheduler.SubmitResult submitCommand$default(io.github.jichuo1.meguviz.ui.scheduler.UiScheduler, kotlin.jvm.functions.Function0, kotlin.jvm.functions.Function0, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/UiScheduler;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult;
+
+  public final io.github.jichuo1.meguviz.ui.scheduler.SubmitResult submitBatch(java.util.List<io.github.jichuo1.meguviz.ui.scheduler.ScheduledOperation>);
+    descriptor: (Ljava/util/List;)Lio/github/jichuo1/meguviz/ui/scheduler/SubmitResult;
+
+  public final void pause(boolean);
+    descriptor: (Z)V
+
+  public static void pause$default(io.github.jichuo1.meguviz.ui.scheduler.UiScheduler, boolean, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/UiScheduler;ZILjava/lang/Object;)V
+
+  public final void resume();
+    descriptor: ()V
+
+  public final void recover();
+    descriptor: ()V
+
+  public final void discardInvalid();
+    descriptor: ()V
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.scheduler.UiScheduler$WhenMappings {
+  public static final int[] $EnumSwitchMapping$0;
+    descriptor: [I
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.EncodedState {
+  public io.github.jichuo1.meguviz.ui.state.EncodedState(java.lang.String, int, io.github.jichuo1.meguviz.ui.state.StateValue$Record);
+    descriptor: (Ljava/lang/String;ILio/github/jichuo1/meguviz/ui/state/StateValue$Record;)V
+
+  public final java.lang.String getCodecId();
+    descriptor: ()Ljava/lang/String;
+
+  public final int getVersion();
+    descriptor: ()I
+
+  public final io.github.jichuo1.meguviz.ui.state.StateValue$Record getData();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/state/StateValue$Record;
+
+  public final <S> S decode(io.github.jichuo1.meguviz.ui.state.StateCodec<S>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/StateCodec;)Ljava/lang/Object;
+
+  public final java.lang.String component1();
+    descriptor: ()Ljava/lang/String;
+
+  public final int component2();
+    descriptor: ()I
+
+  public final io.github.jichuo1.meguviz.ui.state.StateValue$Record component3();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/state/StateValue$Record;
+
+  public final io.github.jichuo1.meguviz.ui.state.EncodedState copy(java.lang.String, int, io.github.jichuo1.meguviz.ui.state.StateValue$Record);
+    descriptor: (Ljava/lang/String;ILio/github/jichuo1/meguviz/ui/state/StateValue$Record;)Lio/github/jichuo1/meguviz/ui/state/EncodedState;
+
+  public static io.github.jichuo1.meguviz.ui.state.EncodedState copy$default(io.github.jichuo1.meguviz.ui.state.EncodedState, java.lang.String, int, io.github.jichuo1.meguviz.ui.state.StateValue$Record, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/EncodedState;Ljava/lang/String;ILio/github/jichuo1/meguviz/ui/state/StateValue$Record;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/EncodedState;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.NodeIdentity {
+  public io.github.jichuo1.meguviz.ui.state.NodeIdentity(java.lang.String, java.lang.String, int);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;I)V
+
+  public final java.lang.String getPath();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String getComponent();
+    descriptor: ()Ljava/lang/String;
+
+  public final int getSchema();
+    descriptor: ()I
+
+  public final java.lang.String component1();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component2();
+    descriptor: ()Ljava/lang/String;
+
+  public final int component3();
+    descriptor: ()I
+
+  public final io.github.jichuo1.meguviz.ui.state.NodeIdentity copy(java.lang.String, java.lang.String, int);
+    descriptor: (Ljava/lang/String;Ljava/lang/String;I)Lio/github/jichuo1/meguviz/ui/state/NodeIdentity;
+
+  public static io.github.jichuo1.meguviz.ui.state.NodeIdentity copy$default(io.github.jichuo1.meguviz.ui.state.NodeIdentity, java.lang.String, java.lang.String, int, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/NodeIdentity;Ljava/lang/String;Ljava/lang/String;IILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/NodeIdentity;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.RestorationSnapshot {
+  public static final io.github.jichuo1.meguviz.ui.state.RestorationSnapshot$Companion Companion;
+    descriptor: Lio/github/jichuo1/meguviz/ui/state/RestorationSnapshot$Companion;
+  public io.github.jichuo1.meguviz.ui.state.RestorationSnapshot(java.util.Map<io.github.jichuo1.meguviz.ui.state.NodeIdentity, java.lang.Integer>, java.util.Map<io.github.jichuo1.meguviz.ui.state.NodeIdentity, io.github.jichuo1.meguviz.ui.state.ViewPresentation>);
+    descriptor: (Ljava/util/Map;Ljava/util/Map;)V
+
+  public final java.util.Map<io.github.jichuo1.meguviz.ui.state.NodeIdentity, java.lang.Integer> getIds();
+    descriptor: ()Ljava/util/Map;
+
+  public final java.util.Map<io.github.jichuo1.meguviz.ui.state.NodeIdentity, io.github.jichuo1.meguviz.ui.state.ViewPresentation> getPresentation();
+    descriptor: ()Ljava/util/Map;
+
+  public final android.os.Bundle toBundle();
+    descriptor: ()Landroid/os/Bundle;
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.RestorationSnapshot$Companion {
+  public final io.github.jichuo1.meguviz.ui.state.RestorationSnapshot fromBundle(android.os.Bundle);
+    descriptor: (Landroid/os/Bundle;)Lio/github/jichuo1/meguviz/ui/state/RestorationSnapshot;
+
+  public io.github.jichuo1.meguviz.ui.state.RestorationSnapshot$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StableIdStore {
+  public io.github.jichuo1.meguviz.ui.state.StableIdStore(java.util.Map<io.github.jichuo1.meguviz.ui.state.NodeIdentity, java.lang.Integer>);
+    descriptor: (Ljava/util/Map;)V
+
+  public io.github.jichuo1.meguviz.ui.state.StableIdStore(java.util.Map, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final int idFor(io.github.jichuo1.meguviz.ui.state.NodeIdentity, java.util.Set<java.lang.Integer>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/NodeIdentity;Ljava/util/Set;)I
+
+  public static int idFor$default(io.github.jichuo1.meguviz.ui.state.StableIdStore, io.github.jichuo1.meguviz.ui.state.NodeIdentity, java.util.Set, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/StableIdStore;Lio/github/jichuo1/meguviz/ui/state/NodeIdentity;Ljava/util/Set;ILjava/lang/Object;)I
+
+  public final void rebuild(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public final java.util.Map<io.github.jichuo1.meguviz.ui.state.NodeIdentity, java.lang.Integer> snapshot();
+    descriptor: ()Ljava/util/Map;
+
+  public io.github.jichuo1.meguviz.ui.state.StableIdStore();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateCodecKt {
+  public static final <S> io.github.jichuo1.meguviz.ui.state.EncodedState snapshot(io.github.jichuo1.meguviz.ui.state.StateCodec<S>, S);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/StateCodec;Ljava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/EncodedState;
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateValue$Decimal implements io.github.jichuo1.meguviz.ui.state.StateValue {
+  public io.github.jichuo1.meguviz.ui.state.StateValue$Decimal(double);
+    descriptor: (D)V
+
+  public final double getValue();
+    descriptor: ()D
+
+  public final double component1();
+    descriptor: ()D
+
+  public final io.github.jichuo1.meguviz.ui.state.StateValue$Decimal copy(double);
+    descriptor: (D)Lio/github/jichuo1/meguviz/ui/state/StateValue$Decimal;
+
+  public static io.github.jichuo1.meguviz.ui.state.StateValue$Decimal copy$default(io.github.jichuo1.meguviz.ui.state.StateValue$Decimal, double, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/StateValue$Decimal;DILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/StateValue$Decimal;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateValue$Empty implements io.github.jichuo1.meguviz.ui.state.StateValue {
+  public static final io.github.jichuo1.meguviz.ui.state.StateValue$Empty INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/state/StateValue$Empty;
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateValue$Flag implements io.github.jichuo1.meguviz.ui.state.StateValue {
+  public io.github.jichuo1.meguviz.ui.state.StateValue$Flag(boolean);
+    descriptor: (Z)V
+
+  public final boolean getValue();
+    descriptor: ()Z
+
+  public final boolean component1();
+    descriptor: ()Z
+
+  public final io.github.jichuo1.meguviz.ui.state.StateValue$Flag copy(boolean);
+    descriptor: (Z)Lio/github/jichuo1/meguviz/ui/state/StateValue$Flag;
+
+  public static io.github.jichuo1.meguviz.ui.state.StateValue$Flag copy$default(io.github.jichuo1.meguviz.ui.state.StateValue$Flag, boolean, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/StateValue$Flag;ZILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/StateValue$Flag;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateValue$Integer implements io.github.jichuo1.meguviz.ui.state.StateValue {
+  public io.github.jichuo1.meguviz.ui.state.StateValue$Integer(long);
+    descriptor: (J)V
+
+  public final long getValue();
+    descriptor: ()J
+
+  public final long component1();
+    descriptor: ()J
+
+  public final io.github.jichuo1.meguviz.ui.state.StateValue$Integer copy(long);
+    descriptor: (J)Lio/github/jichuo1/meguviz/ui/state/StateValue$Integer;
+
+  public static io.github.jichuo1.meguviz.ui.state.StateValue$Integer copy$default(io.github.jichuo1.meguviz.ui.state.StateValue$Integer, long, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/StateValue$Integer;JILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/StateValue$Integer;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateValue$Record implements io.github.jichuo1.meguviz.ui.state.StateValue {
+  public io.github.jichuo1.meguviz.ui.state.StateValue$Record(java.util.Map<java.lang.String, ? extends io.github.jichuo1.meguviz.ui.state.StateValue>);
+    descriptor: (Ljava/util/Map;)V
+
+  public final java.util.Map<java.lang.String, io.github.jichuo1.meguviz.ui.state.StateValue> getValues();
+    descriptor: ()Ljava/util/Map;
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateValue$Sequence implements io.github.jichuo1.meguviz.ui.state.StateValue {
+  public io.github.jichuo1.meguviz.ui.state.StateValue$Sequence(java.util.List<? extends io.github.jichuo1.meguviz.ui.state.StateValue>);
+    descriptor: (Ljava/util/List;)V
+
+  public final java.util.List<io.github.jichuo1.meguviz.ui.state.StateValue> getValues();
+    descriptor: ()Ljava/util/List;
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.StateValue$Text implements io.github.jichuo1.meguviz.ui.state.StateValue {
+  public io.github.jichuo1.meguviz.ui.state.StateValue$Text(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+
+  public final java.lang.String getValue();
+    descriptor: ()Ljava/lang/String;
+
+  public final java.lang.String component1();
+    descriptor: ()Ljava/lang/String;
+
+  public final io.github.jichuo1.meguviz.ui.state.StateValue$Text copy(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/state/StateValue$Text;
+
+  public static io.github.jichuo1.meguviz.ui.state.StateValue$Text copy$default(io.github.jichuo1.meguviz.ui.state.StateValue$Text, java.lang.String, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/StateValue$Text;Ljava/lang/String;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/StateValue$Text;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.ViewPresentation {
+  public io.github.jichuo1.meguviz.ui.state.ViewPresentation(boolean, int, int, java.lang.Integer, java.lang.Integer);
+    descriptor: (ZIILjava/lang/Integer;Ljava/lang/Integer;)V
+
+  public final boolean getFocused();
+    descriptor: ()Z
+
+  public final int getScrollX();
+    descriptor: ()I
+
+  public final int getScrollY();
+    descriptor: ()I
+
+  public final java.lang.Integer getSelectionStart();
+    descriptor: ()Ljava/lang/Integer;
+
+  public final java.lang.Integer getSelectionEnd();
+    descriptor: ()Ljava/lang/Integer;
+
+  public final boolean component1();
+    descriptor: ()Z
+
+  public final int component2();
+    descriptor: ()I
+
+  public final int component3();
+    descriptor: ()I
+
+  public final java.lang.Integer component4();
+    descriptor: ()Ljava/lang/Integer;
+
+  public final java.lang.Integer component5();
+    descriptor: ()Ljava/lang/Integer;
+
+  public final io.github.jichuo1.meguviz.ui.state.ViewPresentation copy(boolean, int, int, java.lang.Integer, java.lang.Integer);
+    descriptor: (ZIILjava/lang/Integer;Ljava/lang/Integer;)Lio/github/jichuo1/meguviz/ui/state/ViewPresentation;
+
+  public static io.github.jichuo1.meguviz.ui.state.ViewPresentation copy$default(io.github.jichuo1.meguviz.ui.state.ViewPresentation, boolean, int, int, java.lang.Integer, java.lang.Integer, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/state/ViewPresentation;ZIILjava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/ViewPresentation;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.state.ViewRestoration implements java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.state.ViewRestoration(io.github.jichuo1.meguviz.ui.UiSession, io.github.jichuo1.meguviz.ui.state.RestorationSnapshot);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Lio/github/jichuo1/meguviz/ui/state/RestorationSnapshot;)V
+
+  public io.github.jichuo1.meguviz.ui.state.ViewRestoration(io.github.jichuo1.meguviz.ui.UiSession, io.github.jichuo1.meguviz.ui.state.RestorationSnapshot, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Lio/github/jichuo1/meguviz/ui/state/RestorationSnapshot;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final void userInteracted();
+    descriptor: ()V
+
+  public final void register(java.lang.String, io.github.jichuo1.meguviz.ui.ViewRef<?>, android.view.View);
+    descriptor: (Ljava/lang/String;Lio/github/jichuo1/meguviz/ui/ViewRef;Landroid/view/View;)V
+
+  public final io.github.jichuo1.meguviz.ui.state.RestorationSnapshot snapshot();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/state/RestorationSnapshot;
+
+  public final void restoreAfterLayout(android.view.View);
+    descriptor: (Landroid/view/View;)V
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.Dp {
+  public final float getValue();
+    descriptor: ()F
+
+  public static final int pixels-impl(float, android.content.Context);
+    descriptor: (FLandroid/content/Context;)I
+
+  public static java.lang.String toString-impl(float);
+    descriptor: (F)Ljava/lang/String;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public static int hashCode-impl(float);
+    descriptor: (F)I
+
+  public int hashCode();
+    descriptor: ()I
+
+  public static boolean equals-impl(float, java.lang.Object);
+    descriptor: (FLjava/lang/Object;)Z
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+
+  public static float constructor-impl(float);
+    descriptor: (F)F
+
+  public static final io.github.jichuo1.meguviz.ui.widgets.Dp box-impl(float);
+    descriptor: (F)Lio/github/jichuo1/meguviz/ui/widgets/Dp;
+
+  public final float unbox-impl();
+    descriptor: ()F
+
+  public static final boolean equals-impl0(float, float);
+    descriptor: (FF)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.FramePolicy implements io.github.jichuo1.meguviz.ui.ParentPolicy<android.widget.FrameLayout, android.widget.FrameLayout$LayoutParams> {
+  public static final io.github.jichuo1.meguviz.ui.widgets.FramePolicy INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/widgets/FramePolicy;
+  public void attach(android.widget.FrameLayout, android.view.View, android.widget.FrameLayout$LayoutParams);
+    descriptor: (Landroid/widget/FrameLayout;Landroid/view/View;Landroid/widget/FrameLayout$LayoutParams;)V
+
+  public void attach(android.view.ViewGroup, android.view.View, android.view.ViewGroup$LayoutParams);
+    descriptor: (Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.FrameScope extends io.github.jichuo1.meguviz.ui.widgets.ParentScope<android.widget.FrameLayout, android.widget.FrameLayout$LayoutParams> {
+  public io.github.jichuo1.meguviz.ui.widgets.FrameScope(io.github.jichuo1.meguviz.ui.UiSession, android.widget.FrameLayout);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Landroid/widget/FrameLayout;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.Framework {
+  public static final io.github.jichuo1.meguviz.ui.widgets.Framework INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/widgets/Framework;
+  public final io.github.jichuo1.meguviz.ui.ComponentType<android.widget.TextView> getText();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<android.widget.EditText> getEdit();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<android.widget.Button> getButton();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<android.widget.ImageView> getImage();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<android.widget.LinearLayout> getLinear();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<android.widget.FrameLayout> getFrame();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ComponentType<android.widget.ScrollView> getScroll();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ComponentType;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<android.widget.TextView> getTextFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<android.widget.EditText> getEditFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<android.widget.Button> getButtonFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<android.widget.ImageView> getImageFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<android.widget.LinearLayout> getLinearFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<android.widget.FrameLayout> getFrameFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+
+  public final io.github.jichuo1.meguviz.ui.ViewFactory<android.widget.ScrollView> getScrollFactory();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/ViewFactory;
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.LinearPolicy implements io.github.jichuo1.meguviz.ui.ParentPolicy<android.widget.LinearLayout, android.widget.LinearLayout$LayoutParams> {
+  public static final io.github.jichuo1.meguviz.ui.widgets.LinearPolicy INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/widgets/LinearPolicy;
+  public void attach(android.widget.LinearLayout, android.view.View, android.widget.LinearLayout$LayoutParams);
+    descriptor: (Landroid/widget/LinearLayout;Landroid/view/View;Landroid/widget/LinearLayout$LayoutParams;)V
+
+  public void attach(android.view.ViewGroup, android.view.View, android.view.ViewGroup$LayoutParams);
+    descriptor: (Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.LinearScope extends io.github.jichuo1.meguviz.ui.widgets.ParentScope<android.widget.LinearLayout, android.widget.LinearLayout$LayoutParams> {
+  public io.github.jichuo1.meguviz.ui.widgets.LinearScope(io.github.jichuo1.meguviz.ui.UiSession, android.widget.LinearLayout);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Landroid/widget/LinearLayout;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.Properties {
+  public static final io.github.jichuo1.meguviz.ui.widgets.Properties INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/widgets/Properties;
+  public final io.github.jichuo1.meguviz.ui.PropertySpec<android.widget.TextView, java.lang.String> plainText();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/PropertySpec;
+
+  public final io.github.jichuo1.meguviz.ui.PropertySpec<android.widget.TextView, java.lang.CharSequence> richText();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/PropertySpec;
+
+  public final io.github.jichuo1.meguviz.ui.PropertySpec<android.widget.TextView, java.lang.Integer> textColor();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/PropertySpec;
+
+  public final io.github.jichuo1.meguviz.ui.PropertySpec<android.view.View, java.lang.Integer> visibility();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/PropertySpec;
+
+  public final io.github.jichuo1.meguviz.ui.PropertySpec<android.widget.CompoundButton, java.lang.Boolean> checked();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/PropertySpec;
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.ScrollPolicy implements io.github.jichuo1.meguviz.ui.ParentPolicy<android.widget.ScrollView, android.widget.FrameLayout$LayoutParams> {
+  public static final io.github.jichuo1.meguviz.ui.widgets.ScrollPolicy INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/widgets/ScrollPolicy;
+  public void attach(android.widget.ScrollView, android.view.View, android.widget.FrameLayout$LayoutParams);
+    descriptor: (Landroid/widget/ScrollView;Landroid/view/View;Landroid/widget/FrameLayout$LayoutParams;)V
+
+  public void attach(android.view.ViewGroup, android.view.View, android.view.ViewGroup$LayoutParams);
+    descriptor: (Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.Sp {
+  public final float getValue();
+    descriptor: ()F
+
+  public static final float pixels-impl(float, android.content.Context);
+    descriptor: (FLandroid/content/Context;)F
+
+  public static java.lang.String toString-impl(float);
+    descriptor: (F)Ljava/lang/String;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public static int hashCode-impl(float);
+    descriptor: (F)I
+
+  public int hashCode();
+    descriptor: ()I
+
+  public static boolean equals-impl(float, java.lang.Object);
+    descriptor: (FLjava/lang/Object;)Z
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+
+  public static float constructor-impl(float);
+    descriptor: (F)F
+
+  public static final io.github.jichuo1.meguviz.ui.widgets.Sp box-impl(float);
+    descriptor: (F)Lio/github/jichuo1/meguviz/ui/widgets/Sp;
+
+  public final float unbox-impl();
+    descriptor: ()F
+
+  public static final boolean equals-impl0(float, float);
+    descriptor: (FF)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.widgets.WidgetsKt {
+  public static final int getMatchParent();
+    descriptor: ()I
+
+  public static final int getWrapContent();
+    descriptor: ()I
+
+  public static final android.widget.LinearLayout$LayoutParams linearParams(int, int, kotlin.jvm.functions.Function1<? super android.widget.LinearLayout$LayoutParams, kotlin.Unit>);
+    descriptor: (IILkotlin/jvm/functions/Function1;)Landroid/widget/LinearLayout$LayoutParams;
+
+  public static android.widget.LinearLayout$LayoutParams linearParams$default(int, int, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (IILkotlin/jvm/functions/Function1;ILjava/lang/Object;)Landroid/widget/LinearLayout$LayoutParams;
+
+  public static final android.widget.FrameLayout$LayoutParams frameParams(int, int, kotlin.jvm.functions.Function1<? super android.widget.FrameLayout$LayoutParams, kotlin.Unit>);
+    descriptor: (IILkotlin/jvm/functions/Function1;)Landroid/widget/FrameLayout$LayoutParams;
+
+  public static android.widget.FrameLayout$LayoutParams frameParams$default(int, int, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (IILkotlin/jvm/functions/Function1;ILjava/lang/Object;)Landroid/widget/FrameLayout$LayoutParams;
+}
+
+public interface io.github.jichuo1.meguviz.ui.ParentPolicy<P extends android.view.ViewGroup, LP extends android.view.ViewGroup$LayoutParams> {
+  public default void attach(P, android.view.View, LP);
+    descriptor: (Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+  public static void access$attach$jd(io.github.jichuo1.meguviz.ui.ParentPolicy, android.view.ViewGroup, android.view.View, android.view.ViewGroup$LayoutParams);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ParentPolicy;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+}
+
+public interface io.github.jichuo1.meguviz.ui.UiDsl extends java.lang.annotation.Annotation {
+}
+
+public interface io.github.jichuo1.meguviz.ui.ViewFactory<V extends android.view.View> {
+  public abstract V create(io.github.jichuo1.meguviz.ui.CreationEnvironment);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/CreationEnvironment;)Landroid/view/View;
+}
+
+public interface io.github.jichuo1.meguviz.ui.scheduler.FrameTicket {
+  public abstract void cancel();
+    descriptor: ()V
+}
+
+public interface io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver {
+  public abstract java.lang.String getOwner();
+    descriptor: ()Ljava/lang/String;
+
+  public abstract io.github.jichuo1.meguviz.ui.scheduler.FrameTicket requestFrame(kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.scheduler.FrameBudget, kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/scheduler/FrameTicket;
+}
+
+public interface io.github.jichuo1.meguviz.ui.state.StateCodec<S> {
+  public abstract java.lang.String getId();
+    descriptor: ()Ljava/lang/String;
+
+  public abstract int getVersion();
+    descriptor: ()I
+
+  public abstract io.github.jichuo1.meguviz.ui.state.StateValue$Record encode(S);
+    descriptor: (Ljava/lang/Object;)Lio/github/jichuo1/meguviz/ui/state/StateValue$Record;
+
+  public abstract S decode(int, io.github.jichuo1.meguviz.ui.state.StateValue$Record);
+    descriptor: (ILio/github/jichuo1/meguviz/ui/state/StateValue$Record;)Ljava/lang/Object;
+}
+
+public interface io.github.jichuo1.meguviz.ui.state.StateValue {
+}

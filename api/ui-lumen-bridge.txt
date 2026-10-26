@@ -1,0 +1,35 @@
+// JVM public descriptors. Kotlin source contracts are additionally checked by compile fixtures.
+
+public final class io.github.jichuo1.meguviz.ui.lumen.LumenUiBridge implements java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.lumen.LumenUiBridge(io.github.jichuo1.meguviz.ui.UiSession, com.lumen.coacervation.engine.host.LumenSurfaceSession, boolean);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Lcom/lumen/coacervation/engine/host/LumenSurfaceSession;Z)V
+
+  public io.github.jichuo1.meguviz.ui.lumen.LumenUiBridge(io.github.jichuo1.meguviz.ui.UiSession, com.lumen.coacervation.engine.host.LumenSurfaceSession, boolean, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Lcom/lumen/coacervation/engine/host/LumenSurfaceSession;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final <V extends android.view.View> io.github.jichuo1.meguviz.ui.lumen.SurfaceRegistration bind(io.github.jichuo1.meguviz.ui.ViewRef<V>, com.lumen.coacervation.engine.host.LumenSurfaceOptions, android.view.View);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/ViewRef;Lcom/lumen/coacervation/engine/host/LumenSurfaceOptions;Landroid/view/View;)Lio/github/jichuo1/meguviz/ui/lumen/SurfaceRegistration;
+
+  public static io.github.jichuo1.meguviz.ui.lumen.SurfaceRegistration bind$default(io.github.jichuo1.meguviz.ui.lumen.LumenUiBridge, io.github.jichuo1.meguviz.ui.ViewRef, com.lumen.coacervation.engine.host.LumenSurfaceOptions, android.view.View, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/lumen/LumenUiBridge;Lio/github/jichuo1/meguviz/ui/ViewRef;Lcom/lumen/coacervation/engine/host/LumenSurfaceOptions;Landroid/view/View;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/lumen/SurfaceRegistration;
+
+  public final void pause();
+    descriptor: ()V
+
+  public final void resume();
+    descriptor: ()V
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.lumen.SurfaceRegistration implements java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.lumen.SurfaceRegistration(io.github.jichuo1.meguviz.ui.UiSession, com.lumen.coacervation.engine.host.LumenSurfaceBinding, java.lang.AutoCloseable, kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.lumen.SurfaceRegistration, kotlin.Unit>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Lcom/lumen/coacervation/engine/host/LumenSurfaceBinding;Ljava/lang/AutoCloseable;Lkotlin/jvm/functions/Function1;)V
+
+  public final void update(com.lumen.coacervation.engine.host.LumenSurfaceOptions);
+    descriptor: (Lcom/lumen/coacervation/engine/host/LumenSurfaceOptions;)V
+
+  public void close();
+    descriptor: ()V
+}

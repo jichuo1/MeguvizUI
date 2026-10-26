@@ -1,0 +1,7 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="PanelTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">#163447</item>
+        <item name="android:colorAccent">#006B5E</item>
+    </style>
+</resources>

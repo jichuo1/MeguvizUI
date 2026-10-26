@@ -1,0 +1,5 @@
+<resources>
+    <string name="count_value">Count: %1$d</string>
+    <string name="draft_hint">Write a note</string>
+    <string name="increment">Increment</string>
+</resources>

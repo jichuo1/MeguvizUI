@@ -1,0 +1,42 @@
+name: Verify MeguvizUI
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  host:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
+        with:
+          packages: platform-tools
+      - name: Install declared SDK
+        run: sdkmanager "platforms;android-37.0" "build-tools;37.0.0"
+      - name: Configure local SDK
+        run: |
+          printf 'sdk.dir=%s\n' "$ANDROID_HOME" > local.properties
+          chmod +x gradlew
+      - name: Verify host and compile instrumentation
+        run: ./gradlew -PenableRef=true verifyHost :samples:standalone:assembleDebugAndroidTest --no-daemon --max-workers=2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: host-evidence
+          path: |
+            build/reports/
+            build/repo/
+            ui-*/build/reports/
+            ui-*/build/test-results/
+            samples/*/build/reports/
+            samples/*/build/outputs/apk/

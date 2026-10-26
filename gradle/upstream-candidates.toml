@@ -1,0 +1,27 @@
+[candidates.meguviz-ref-core]
+version = "1.0.0"
+packaging = "jar"
+sha256 = "3cab2b1fef3414814e32661baca959e4680db0f6fb2535ed1f73b4dc0a478e19"
+[candidates.meguviz-ref-core.files]
+"meguviz-ref-core-1.0.0.pom" = "6db29eec67a48e5cfc0b981d6a81c162c08f0ed51b79a4574d4acea445d21c88"
+"meguviz-ref-core-1.0.0.module" = "51b454b42916015de8021410ebc5bf671864e0c87568c2ad733a46ed45cbc54b"
+
+[candidates.meguviz-android-runtime]
+version = "0.1.0-20261026.092310-6"
+packaging = "aar"
+sha256 = "c0430f1e02e08d63d90fbb25b6c2fbb38cacf958f8c1e4166a45f1bf3dcda688"
+[candidates.meguviz-android-runtime.files]
+"meguviz-android-runtime-0.1.0-20261026.092310-6.pom" = "7bfbca8d8fc9949432ce26af0b56a07550867ef98492b8d191677f11727db9ba"
+"meguviz-android-runtime-0.1.0-20261026.092310-6.module" = "aaf3da35f7c6d7020a8057bfb810b329b077557fd21cdd2ab4c94dc6e39b7112"
+"meguviz-android-runtime-0.1.0-20261026.092310-6-sources.jar" = "cae133aaa132aa28d063f64b1f87a594b5719ec35b907248a6d7081bfc1e6878"
+"maven-metadata.xml" = "ddcf4faf17b28d98e21da0ed0795257e5f426d720264bc7a9f80c8dbae8711c2"
+
+[candidates.meguviz-android-window]
+version = "0.1.0-20261026.092310-3"
+packaging = "aar"
+sha256 = "e68f846e97e2f6174dba0e6379ce40f18ff1ca5bbdcb46d312cdd3b0ecf66b31"
+[candidates.meguviz-android-window.files]
+"meguviz-android-window-0.1.0-20261026.092310-3.pom" = "81a3143986259fff95d0bebc27ac632840ad0e49dfc4e07cd9f071c90a962325"
+"meguviz-android-window-0.1.0-20261026.092310-3.module" = "6806ca9e5396db98e763b7ed52cb96ae6c57b2dc59facf8fec4f871b8ec9da3a"
+"meguviz-android-window-0.1.0-20261026.092310-3-sources.jar" = "173665cf051cfe007b6d6206b3daee3b91825a3f932a41c6f0c6a600f0028221"
+"maven-metadata.xml" = "142389d3ac7f6b02cdd8c56d68cfd2c7b7acfac60405f59c38348d3b19a310eb"

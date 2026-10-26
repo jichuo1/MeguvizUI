@@ -1,0 +1,100 @@
+// JVM public descriptors. Kotlin source contracts are additionally checked by compile fixtures.
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidFrameDriver implements io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver,java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.android.AndroidFrameDriver(io.github.jichuo1.meguviz.android.runtime.core.OwnerDispatcher, io.github.jichuo1.meguviz.android.runtime.core.FrameScheduler, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/android/runtime/core/OwnerDispatcher;Lio/github/jichuo1/meguviz/android/runtime/core/FrameScheduler;Ljava/lang/Object;)V
+
+  public java.lang.String getOwner();
+    descriptor: ()Ljava/lang/String;
+
+  public final boolean isClosed();
+    descriptor: ()Z
+
+  public final java.lang.Long getLastFrameSequence();
+    descriptor: ()Ljava/lang/Long;
+
+  public final void onClose(kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function0;)V
+
+  public io.github.jichuo1.meguviz.ui.scheduler.FrameTicket requestFrame(kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.scheduler.FrameBudget, kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/scheduler/FrameTicket;
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidFrameDriverKt {
+  public static final io.github.jichuo1.meguviz.ui.scheduler.FrameBudget toUiBudget(io.github.jichuo1.meguviz.android.runtime.core.FrameTick, java.lang.String);
+    descriptor: (Lio/github/jichuo1/meguviz/android/runtime/core/FrameTick;Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/scheduler/FrameBudget;
+}
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidResourceAuthorityKt {
+  public static final io.github.jichuo1.meguviz.ui.ResourceAuthority androidResourceAuthority(io.github.jichuo1.meguviz.android.runtime.resources.ResourceScope);
+    descriptor: (Lio/github/jichuo1/meguviz/android/runtime/resources/ResourceScope;)Lio/github/jichuo1/meguviz/ui/ResourceAuthority;
+
+  public static final io.github.jichuo1.meguviz.ui.ResourceAuthority androidResourceAuthority(io.github.jichuo1.meguviz.android.runtime.resources.ResourceState);
+    descriptor: (Lio/github/jichuo1/meguviz/android/runtime/resources/ResourceState;)Lio/github/jichuo1/meguviz/ui/ResourceAuthority;
+}
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidUiBinding implements java.lang.AutoCloseable {
+  public static final io.github.jichuo1.meguviz.ui.android.AndroidUiBinding$Companion Companion;
+    descriptor: Lio/github/jichuo1/meguviz/ui/android/AndroidUiBinding$Companion;
+  public final io.github.jichuo1.meguviz.ui.UiSession getUi();
+    descriptor: ()Lio/github/jichuo1/meguviz/ui/UiSession;
+
+  public void close();
+    descriptor: ()V
+
+  public io.github.jichuo1.meguviz.ui.android.AndroidUiBinding(io.github.jichuo1.meguviz.ui.UiSession, android.view.View, io.github.jichuo1.meguviz.android.window.ViewScope, io.github.jichuo1.meguviz.ui.android.AndroidWindowFrameDriver, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;Landroid/view/View;Lio/github/jichuo1/meguviz/android/window/ViewScope;Lio/github/jichuo1/meguviz/ui/android/AndroidWindowFrameDriver;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public static final void access$install(io.github.jichuo1.meguviz.ui.android.AndroidUiBinding);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/android/AndroidUiBinding;)V
+
+  public static final boolean access$getClosed$p(io.github.jichuo1.meguviz.ui.android.AndroidUiBinding);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/android/AndroidUiBinding;)Z
+
+  public static final io.github.jichuo1.meguviz.ui.android.AndroidWindowFrameDriver access$getDriver$p(io.github.jichuo1.meguviz.ui.android.AndroidUiBinding);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/android/AndroidUiBinding;)Lio/github/jichuo1/meguviz/ui/android/AndroidWindowFrameDriver;
+}
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidUiBinding$Companion {
+  public final io.github.jichuo1.meguviz.ui.android.AndroidUiBinding open(io.github.jichuo1.meguviz.android.window.WindowSession, android.view.View);
+    descriptor: (Lio/github/jichuo1/meguviz/android/window/WindowSession;Landroid/view/View;)Lio/github/jichuo1/meguviz/ui/android/AndroidUiBinding;
+
+  public io.github.jichuo1.meguviz.ui.android.AndroidUiBinding$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidUiBinding$attachment$1 implements android.view.View$OnAttachStateChangeListener {
+  public void onViewDetachedFromWindow(android.view.View);
+    descriptor: (Landroid/view/View;)V
+
+  public void onViewAttachedToWindow(android.view.View);
+    descriptor: (Landroid/view/View;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidWindowFrameDriver implements io.github.jichuo1.meguviz.ui.scheduler.UiFrameDriver,java.lang.AutoCloseable {
+  public io.github.jichuo1.meguviz.ui.android.AndroidWindowFrameDriver(io.github.jichuo1.meguviz.android.window.WindowSession, java.lang.Object, boolean);
+    descriptor: (Lio/github/jichuo1/meguviz/android/window/WindowSession;Ljava/lang/Object;Z)V
+
+  public java.lang.String getOwner();
+    descriptor: ()Ljava/lang/String;
+
+  public final void onClose(kotlin.jvm.functions.Function0<kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function0;)V
+
+  public final void setAttached(boolean);
+    descriptor: (Z)V
+
+  public io.github.jichuo1.meguviz.ui.scheduler.FrameTicket requestFrame(kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.scheduler.FrameBudget, kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/scheduler/FrameTicket;
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.android.AndroidWindowFrameDriverKt {
+  public static final void closeAll(java.util.List<? extends kotlin.jvm.functions.Function0<kotlin.Unit>>);
+    descriptor: (Ljava/util/List;)V
+}
