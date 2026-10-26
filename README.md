@@ -11,7 +11,7 @@
 ![Android API 27+](https://img.shields.io/badge/Android-API%2027%2B-3DDC84)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue)](LICENSE)
 
-[快速开始](#-快速开始) · [使用示例](#-使用示例) · [关键行为](#-关键行为) · [文档](#-文档)
+[快速开始](#quick-start) · [使用示例](#examples) · [关键行为](#behavior) · [文档](#documentation)
 
 </div>
 
@@ -35,6 +35,8 @@
 | `ui-android-bridge` | `meguviz-ui-android-bridge` | 对接窗口生命周期、资源权威与同一帧驱动 |
 | `ui-testkit` | 不发布 | 合同测试支持 |
 
+<a id="quick-start"></a>
+
 ## 🚀 快速开始
 
 当前版本为 **`1.0.0` 源码版本**，尚未发布到 Maven Central，尚无历史稳定版兼容证明。API 27 是声明的最低版本；完整设备、无障碍及性能矩阵尚未完成。
@@ -48,6 +50,8 @@ cd MeguvizUI
 ```
 
 Windows 使用 `gradlew.bat`；本地 Maven 候选写入 `build/repo/`。普通应用依赖 `meguviz-ui-widgets` 即可，具体接入与可选桥准备见 [安装说明](docs/installation.md)。
+
+<a id="examples"></a>
 
 ## 💡 使用示例
 
@@ -75,6 +79,8 @@ session.close()
 
 完整示例见 [standalone](samples/standalone) 与 [xml-interop](samples/xml-interop)。前者包含计数命令、输入模型和布局后恢复；后者展示 AppCompat 的 Factory2、主题与已有 View 的借用。
 
+<a id="behavior"></a>
+
 ## ⚠️ 关键行为
 
 1. View 与会话操作在主线程执行。释放后的 `ViewRef` 失效；持有原生 View 的外部代码仍需自行遵守所有权约定。
@@ -83,6 +89,8 @@ session.close()
 4. 应用先恢复权威模型，再恢复焦点、选择与滚动；自定义控件需要自己的 codec 或公开恢复适配。
 5. Lumen 保留材质与动效职责。Android 桥使用上游帧通道，关闭顺序由窗口所有者协调。
 6. Host 构建、设备交互和完整发布验收分别记录；单元测试成功不代表设备矩阵或性能结论。
+
+<a id="documentation"></a>
 
 ## 📚 文档
 
