@@ -1,0 +1,20 @@
+[versions]
+agp = "9.4.1"
+kotlin = "2.4.21"
+ksp = "2.3.12"
+meguviz = "1.0.0"
+
+[libraries]
+widgets = { module = "io.github.jichuo1.meguviz:meguviz-ui-widgets", version.ref = "meguviz" }
+plan = { module = "io.github.jichuo1.meguviz:meguviz-ui-plan", version.ref = "meguviz" }
+recycler = { module = "io.github.jichuo1.meguviz:meguviz-ui-recycler", version.ref = "meguviz" }
+text = { module = "io.github.jichuo1.meguviz:meguviz-ui-text", version.ref = "meguviz" }
+layouts = { module = "io.github.jichuo1.meguviz:meguviz-ui-layouts", version.ref = "meguviz" }
+prewarm = { module = "io.github.jichuo1.meguviz:meguviz-ui-prewarm", version.ref = "meguviz" }
+annotations = { module = "io.github.jichuo1.meguviz:meguviz-ui-codegen-api", version.ref = "meguviz" }
+processor = { module = "io.github.jichuo1.meguviz:meguviz-ui-codegen", version.ref = "meguviz" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

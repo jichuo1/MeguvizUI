@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Generated consumer</string>
+    <string name="generated_factory_ready">Generated factory ready</string>
+</resources>

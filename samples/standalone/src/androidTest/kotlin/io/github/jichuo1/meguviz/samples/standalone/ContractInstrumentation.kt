@@ -36,6 +36,18 @@ class ContractInstrumentation : Instrumentation() {
             return FrameTicket { this.callback = null }
         }
         fun tick() { val next = callback; callback = null; next?.invoke(FrameBudget(System.nanoTime())) }
+        fun drainUntilIdle(session: UiSession, maxFrames: Int = 1000) {
+            val scheduler = session.scheduler
+            var frames = 0
+            while (callback != null || scheduler.pendingStateCount != 0 || scheduler.pendingCommandCount != 0) {
+                check(scheduler.state == SchedulerState.ACTIVE && callback != null && frames++ < maxFrames) {
+                    "Unable to drain: state=${scheduler.state}, failure=${scheduler.failure}, " +
+                        "pendingState=${scheduler.pendingStateCount}, pendingCommand=${scheduler.pendingCommandCount}, " +
+                        "counters=${scheduler.counters}"
+                }
+                tick()
+            }
+        }
     }
     private fun fails(block: () -> Unit) { var failed = false; try { block() } catch (_: IllegalStateException) { failed = true } catch (_: IllegalArgumentException) { failed = true }; check(failed) }
 
@@ -129,8 +141,12 @@ class ContractInstrumentation : Instrumentation() {
                     val ref = FrameScope(session, FrameLayout(targetContext)).view(ViewKey("switch"), type, frameParams(), ViewFactory { CheckBox(it.context) })
                     ref.get().setOnCheckedChangeListener { button, checked -> if (checked) button.isChecked = false }
                     val binding = session.bind(ref, PropertySpec<CheckBox, Boolean>("checked", read = { it.isChecked }, write = { view, value -> view.isChecked = value }))
-                    binding.submit(true); binding.submit(true); driver.tick()
-                    check(!ref.get().isChecked && binding.writes == 2L)
+                    check(binding.submit(true) !is SubmitResult.Rejected)
+                    check(binding.submit(true) !is SubmitResult.Rejected)
+                    driver.drainUntilIdle(session)
+                    check(!ref.get().isChecked && binding.writes == 2L) {
+                        "checked=${ref.get().isChecked}, writes=${binding.writes}, counters=${session.scheduler.counters}"
+                    }
                 } finally { session.close() }
             },
             "plain_label_does_not_skip_existing_span" to {
@@ -217,8 +233,14 @@ class ContractInstrumentation : Instrumentation() {
                     val resolved = registry.resolve(Framework.text)
                     val ref = FrameScope(session, FrameLayout(targetContext)).view(ViewKey("resolved"), Framework.text, frameParams(), resolved)
                     val binding = session.bind(ref, Properties.plainText())
-                    repeat(10000) { binding.submit(it.toString()); driver.tick() }
-                    check(constructions == 1 && registry.candidateChecks == 1L && binding.writes == 10000L)
+                    repeat(10000) {
+                        check(binding.submit(it.toString()) !is SubmitResult.Rejected)
+                        driver.drainUntilIdle(session)
+                    }
+                    check(constructions == 1 && registry.candidateChecks == 1L && binding.writes == 10000L) {
+                        "constructions=$constructions, candidateChecks=${registry.candidateChecks}, writes=${binding.writes}, " +
+                            "counters=${session.scheduler.counters}"
+                    }
                 } finally { session.close() }
             },
         )

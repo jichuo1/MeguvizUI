@@ -27,7 +27,10 @@ def source_hash(root: Path) -> str:
         relative = path.relative_to(root)
         if any(part in EXCLUDE for part in relative.parts) or not path.is_file():
             continue
-        if path.name == "local.properties" or (path.suffix not in SOURCE_SUFFIXES and path.name not in {"gradlew", "gradlew.bat"} and not (relative.parts[0] == "api" and path.suffix == ".txt")):
+        if relative.as_posix() == "samples/p2-consumer/gradle/verification-metadata.xml":
+            continue  # Generated from the current, separately hash-bound Maven candidates.
+        service_descriptor = "META-INF" in relative.parts and "services" in relative.parts
+        if path.name == "local.properties" or (path.suffix not in SOURCE_SUFFIXES and path.name not in {"gradlew", "gradlew.bat"} and not (relative.parts[0] == "api" and path.suffix == ".txt") and not service_descriptor):
             continue
         digest.update(relative.as_posix().encode("utf-8") + b"\0" + path.read_bytes() + b"\0")
     return digest.hexdigest()
@@ -44,7 +47,9 @@ def read(path: Path) -> dict:
 
 def artifact_hashes(root: Path) -> dict[str, str]:
     paths = list(root.glob("ui-*/build/outputs/aar/*-release.aar"))
+    paths += [p for p in root.glob("ui-codegen*/build/libs/*.jar") if not p.name.endswith("-sources.jar")]
     paths += list(root.glob("build/repo/**/*.aar"))
+    paths += list(root.glob("build/repo/**/meguviz-ui-codegen*.jar"))
     paths += list(root.glob("build/repo/**/*.pom"))
     paths += [p for p in root.glob("build/upstream-repo/**/*") if p.is_file() and p.suffix in {".jar", ".aar", ".pom", ".module", ".xml", ".json"}]
     return {path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
@@ -321,7 +326,8 @@ def device(root: Path, profiles: set[str]) -> int:
 
 
 def validate_receipt(receipt: dict, digest: str, profiles: set[str], artifacts: dict,
-                     root: Path | None = None, require_reports: bool = False, require_device_apks: bool = False) -> list[str]:
+                     root: Path | None = None, require_reports: bool = False, require_device_apks: bool = False,
+                     count_field: str = "test_count") -> list[str]:
     errors = []
     if receipt.get("status") != "passed" or not receipt.get("ready"):
         errors.append("gate is not passed")
@@ -329,8 +335,9 @@ def validate_receipt(receipt: dict, digest: str, profiles: set[str], artifacts: 
         errors.append("source revision is stale")
     if not profiles.issubset(set(receipt.get("profiles", []))):
         errors.append("required profile is missing")
-    if receipt.get("test_count", 0) < 1:
-        errors.append("zero tests")
+    count = receipt.get(count_field, 0)
+    if not isinstance(count, int) or isinstance(count, bool) or count < 1:
+        errors.append("zero checks" if count_field == "check_count" else "zero tests")
     recorded = receipt.get("artifacts", {})
     if not recorded or any(artifacts.get(name) != sha for name, sha in recorded.items()):
         errors.append("artifact missing or changed")
@@ -357,7 +364,7 @@ def validate_receipt(receipt: dict, digest: str, profiles: set[str], artifacts: 
     return errors
 
 
-def release(root: Path, profiles: set[str]) -> int:
+def release(root: Path, profiles: set[str], p2_profiles: set[str] | None = None) -> int:
     digest = source_hash(root)
     artifacts = artifact_hashes(root)
     state_path = root / "PROJECT_STATE.json"
@@ -390,6 +397,22 @@ def release(root: Path, profiles: set[str]) -> int:
         errors.append("A selected profile is unknown or disabled in the integration declaration")
     if not profiles.issubset(required_profiles):
         errors.append("Invocation profiles are outside the declared release scope")
+    requested_p2 = p2_profiles or set()
+    allowed_p2 = {"plan", "codegen", "recycler", "text", "layouts", "prewarm"}
+    state_p2 = state.get("selected_p2_profiles", [])
+    declaration_p2 = declaration.get("selected_p2_profiles", [])
+    if (not isinstance(state_p2, list) or not isinstance(declaration_p2, list)
+            or any(not isinstance(value, str) for value in state_p2 + declaration_p2)):
+        errors.append("Invalid P2 profile declaration")
+        required_p2 = set()
+    else:
+        required_p2 = set(state_p2)
+        if len(required_p2) != len(state_p2) or len(set(declaration_p2)) != len(declaration_p2):
+            errors.append("Duplicate P2 profile declaration")
+        if required_p2 != set(declaration_p2) or requested_p2 != required_p2:
+            errors.append("P2 invocation, project state and integration declaration must match")
+        if not required_p2.issubset(allowed_p2):
+            errors.append("Unknown P2 profile")
     receipts = {}
     for name in ("host", "device"):
         path = root / f"build/reports/gates/{name}.json"
@@ -416,9 +439,18 @@ def release(root: Path, profiles: set[str]) -> int:
         else:
             needed = {"core"}
         errors += [f"{name}: {e}" for e in validate_receipt(receipt, digest, needed, artifacts, root)]
+    if required_p2:
+        for name in ("p2-host", "p2-consumer", "p2-device", "p2-performance"):
+            path = root / f"build/reports/gates/{name}.json"
+            receipt = read(path) if path.is_file() else {}
+            receipts[name] = receipt.get("status", "not_run")
+            errors += [f"{name}: {e}" for e in validate_receipt(
+                receipt, digest, required_p2, artifacts, root, require_reports=True,
+                count_field="check_count" if name == "p2-consumer" else "test_count")]
     value = {"schema_version": 1, "gate": "release", "status": "blocked" if errors else "passed",
              "ready": not errors, "execution_target": target, "source_sha256": digest,
-             "profiles": sorted(required_profiles), "artifacts": artifacts, "gates": receipts, "errors": errors,
+             "profiles": sorted(required_profiles), "p2_profiles": sorted(required_p2),
+             "artifacts": artifacts, "gates": receipts, "errors": errors,
              "finished_epoch": time.time()}
     write(root / "build/reports/gates/release.json", value)
     write(root / "gate-results.json", value)
@@ -431,6 +463,7 @@ def main() -> int:
     parser.add_argument("mode", choices=("start-host", "start-device", "host", "device", "release", "hash"))
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--profiles", default="core", help="Explicit comma-separated profiles included in this invocation")
+    parser.add_argument("--p2-profiles", default="", help="Explicit optional P2 profiles included in the release")
     args = parser.parse_args()
     root = args.root.resolve(strict=True)
     profiles = {name for name in args.profiles.split(",") if name}
@@ -440,6 +473,8 @@ def main() -> int:
         return start(root, args.mode.removeprefix("start-"), profiles)
     if args.mode == "hash":
         print(source_hash(root)); return 0
+    if args.mode == "release":
+        return release(root, profiles, set(filter(None, args.p2_profiles.split(","))))
     return {"host": finish_host, "device": device, "release": release}[args.mode](root, profiles)
 
 

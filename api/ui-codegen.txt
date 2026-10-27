@@ -1,0 +1,14 @@
+// JVM public descriptors. Kotlin source contracts require separate compilation.
+
+public final class io.github.jichuo1.meguviz.ui.codegen.processor.UiFactoryProcessorKt {
+  public static final boolean access$validIdentifier(java.lang.String);
+    descriptor: (Ljava/lang/String;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.codegen.processor.UiFactoryProcessorProvider implements com.google.devtools.ksp.processing.SymbolProcessorProvider {
+  public io.github.jichuo1.meguviz.ui.codegen.processor.UiFactoryProcessorProvider();
+    descriptor: ()V
+
+  public com.google.devtools.ksp.processing.SymbolProcessor create(com.google.devtools.ksp.processing.SymbolProcessorEnvironment);
+    descriptor: (Lcom/google/devtools/ksp/processing/SymbolProcessorEnvironment;)Lcom/google/devtools/ksp/processing/SymbolProcessor;
+}

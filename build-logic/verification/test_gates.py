@@ -87,6 +87,11 @@ class GateContracts(unittest.TestCase):
             before = source_hash(root)
             (root / ".github/workflows/verify.yml").write_text("name: check", encoding="utf-8")
             self.assertNotEqual(before, source_hash(root))
+            before = source_hash(root)
+            service = root / "ui-codegen/src/main/resources/META-INF/services/processor.Provider"
+            service.parent.mkdir(parents=True)
+            service.write_text("processor.One", encoding="utf-8")
+            self.assertNotEqual(before, source_hash(root))
 
     def test_release_entry_rejects_empty_or_missing_profile_selection(self):
         with tempfile.TemporaryDirectory(dir=TEMP_ROOT) as directory:
@@ -99,6 +104,19 @@ class GateContracts(unittest.TestCase):
                 receipt = json.loads((root / "build/reports/gates/release.json").read_text(encoding="utf-8"))
                 self.assertFalse(receipt["ready"])
                 self.assertTrue(any("Invalid selected profiles in PROJECT_STATE.json" in error for error in receipt["errors"]))
+
+    def test_generated_p2_verification_is_not_source_but_consumer_lock_is(self):
+        with tempfile.TemporaryDirectory(dir=TEMP_ROOT) as directory:
+            root = Path(directory)
+            generated = root / "samples/p2-consumer/gradle/verification-metadata.xml"
+            generated.parent.mkdir(parents=True)
+            before = source_hash(root)
+            generated.write_text("candidate checksums", encoding="utf-8")
+            self.assertEqual(before, source_hash(root))
+            lock = root / "samples/p2-consumer/app/gradle.lockfile"
+            lock.parent.mkdir(parents=True)
+            lock.write_text("locked dependency", encoding="utf-8")
+            self.assertNotEqual(before, source_hash(root))
 
     def test_release_entry_rejects_silently_narrowed_declared_scope(self):
         with tempfile.TemporaryDirectory(dir=TEMP_ROOT) as directory:
@@ -214,6 +232,25 @@ class GateContracts(unittest.TestCase):
                 self.assertEqual(2, release(root, {"core", "lumen", "ref", "android"}))
             result = json.loads((root / "build/reports/gates/release.json").read_text("utf-8"))
             self.assertIn("bridge-r8: required profile is missing", result["errors"])
+
+    def test_selected_p2_cannot_be_silently_omitted_or_pass_without_device_and_performance(self):
+        with tempfile.TemporaryDirectory(dir=TEMP_ROOT) as directory:
+            root = Path(directory)
+            selected = ["plan", "codegen", "recycler", "text", "layouts", "prewarm"]
+            state = {"execution_target": "full_replacement", "selected_profiles": ["core"], "selected_p2_profiles": selected}
+            declaration = {"execution_target": "full_replacement", "selected_profiles": ["core"],
+                           "selected_p2_profiles": selected, "profiles": {"core": {"enabled": True}}}
+            write(root / "PROJECT_STATE.json", state)
+            write(root / "integration/profiles.json", declaration)
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(2, release(root, {"core"}))
+            result = json.loads((root / "build/reports/gates/release.json").read_text("utf-8"))
+            self.assertIn("P2 invocation, project state and integration declaration must match", result["errors"])
+            with contextlib.redirect_stdout(io.StringIO()):
+                self.assertEqual(2, release(root, {"core"}, set(selected)))
+            result = json.loads((root / "build/reports/gates/release.json").read_text("utf-8"))
+            self.assertIn("p2-device: gate is not passed", result["errors"])
+            self.assertIn("p2-performance: gate is not passed", result["errors"])
 
     def test_released_ref_uses_resolved_hash_without_snapshot_mirror(self):
         with tempfile.TemporaryDirectory(dir=TEMP_ROOT) as directory:

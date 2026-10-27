@@ -1,0 +1,44 @@
+// JVM public descriptors. Kotlin source contracts require separate compilation.
+
+public final class io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints {
+  public io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints(int);
+    descriptor: (I)V
+
+  public io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints(int, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final int getMaxChildren();
+    descriptor: ()I
+
+  public final void checkChildCount(int);
+    descriptor: (I)V
+
+  public final int component1();
+    descriptor: ()I
+
+  public final io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints copy(int);
+    descriptor: (I)Lio/github/jichuo1/meguviz/ui/layouts/NativeRowConstraints;
+
+  public static io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints copy$default(io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints, int, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/layouts/NativeRowConstraints;IILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/layouts/NativeRowConstraints;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+
+  public io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.layouts.NativeRowKt {
+  public static final <P extends android.view.ViewGroup, LP extends android.view.ViewGroup$LayoutParams> io.github.jichuo1.meguviz.ui.ViewRef<android.widget.LinearLayout> nativeRow-9oLOuZc(io.github.jichuo1.meguviz.ui.widgets.ParentScope<P, LP>, java.lang.String, LP, io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints, kotlin.jvm.functions.Function1<? super android.widget.LinearLayout, kotlin.Unit>, kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.widgets.LinearScope, kotlin.Unit>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lio/github/jichuo1/meguviz/ui/layouts/NativeRowConstraints;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+
+  public static io.github.jichuo1.meguviz.ui.ViewRef nativeRow-9oLOuZc$default(io.github.jichuo1.meguviz.ui.widgets.ParentScope, java.lang.String, android.view.ViewGroup$LayoutParams, io.github.jichuo1.meguviz.ui.layouts.NativeRowConstraints, kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/widgets/ParentScope;Ljava/lang/String;Landroid/view/ViewGroup$LayoutParams;Lio/github/jichuo1/meguviz/ui/layouts/NativeRowConstraints;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/ViewRef;
+}

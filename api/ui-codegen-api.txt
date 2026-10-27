@@ -1,0 +1,9 @@
+// JVM public descriptors. Kotlin source contracts require separate compilation.
+
+public interface io.github.jichuo1.meguviz.ui.codegen.GenerateUiFactory extends java.lang.annotation.Annotation {
+  public abstract java.lang.String id();
+    descriptor: ()Ljava/lang/String;
+
+  public abstract int schema();
+    descriptor: ()I
+}

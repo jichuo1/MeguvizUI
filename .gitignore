@@ -49,3 +49,4 @@ __pycache__/
 !/docs/development.md
 !/docs/contracts.md
 !/docs/bridges.md
+!/docs/p2.md

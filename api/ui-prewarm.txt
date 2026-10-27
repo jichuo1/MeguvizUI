@@ -1,0 +1,158 @@
+// JVM public descriptors. Kotlin source contracts require separate compilation.
+
+public abstract class io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission {
+  public io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop extends java.lang.Enum<io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop> {
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop CANCELLED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop DETACHED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop LOW_MEMORY;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop RESOURCE_CHANGED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop OVER_BUDGET;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop UNIT_LIMIT;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop FAILED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop SCHEDULER_UNAVAILABLE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop CLOSED;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+  public static io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop[] values();
+    descriptor: ()[Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+
+  public static io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop valueOf(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmStop;
+
+  public static kotlin.enums.EnumEntries<io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop> getEntries();
+    descriptor: ()Lkotlin/enums/EnumEntries;
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$Accepted extends io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission {
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$Accepted INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmSubmission$Accepted;
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$AtCapacity extends io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission {
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$AtCapacity INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmSubmission$AtCapacity;
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$Closed extends io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission {
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$Closed INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmSubmission$Closed;
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$SchedulerUnavailable extends io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission {
+  public static final io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission$SchedulerUnavailable INSTANCE;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmSubmission$SchedulerUnavailable;
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+
+  public int hashCode();
+    descriptor: ()I
+
+  public boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.PrewarmWork {
+  public io.github.jichuo1.meguviz.ui.prewarm.PrewarmWork(kotlin.jvm.functions.Function0<java.lang.Boolean>, kotlin.jvm.functions.Function0<java.lang.Boolean>, kotlin.jvm.functions.Function0<kotlin.Unit>, kotlin.jvm.functions.Function1<? super io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop, kotlin.Unit>);
+    descriptor: (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)V
+
+  public final kotlin.jvm.functions.Function0<java.lang.Boolean> isCurrent();
+    descriptor: ()Lkotlin/jvm/functions/Function0;
+
+  public final kotlin.jvm.functions.Function0<java.lang.Boolean> getStep();
+    descriptor: ()Lkotlin/jvm/functions/Function0;
+
+  public final kotlin.jvm.functions.Function0<kotlin.Unit> getReady();
+    descriptor: ()Lkotlin/jvm/functions/Function0;
+
+  public final kotlin.jvm.functions.Function1<io.github.jichuo1.meguviz.ui.prewarm.PrewarmStop, kotlin.Unit> getDiscard();
+    descriptor: ()Lkotlin/jvm/functions/Function1;
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer implements java.lang.AutoCloseable {
+  public static final io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer$Companion Companion;
+    descriptor: Lio/github/jichuo1/meguviz/ui/prewarm/UiPrewarmer$Companion;
+  public io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer(io.github.jichuo1.meguviz.ui.scheduler.UiScheduler, kotlin.jvm.functions.Function0<kotlin.Unit>, int, int, long, kotlin.jvm.functions.Function0<java.lang.Long>);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/UiScheduler;Lkotlin/jvm/functions/Function0;IIJLkotlin/jvm/functions/Function0;)V
+
+  public io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer(io.github.jichuo1.meguviz.ui.scheduler.UiScheduler, kotlin.jvm.functions.Function0, int, int, long, kotlin.jvm.functions.Function0, int, kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/scheduler/UiScheduler;Lkotlin/jvm/functions/Function0;IIJLkotlin/jvm/functions/Function0;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+  public final int getCapacity();
+    descriptor: ()I
+
+  public final int getMaxUnitsPerWork();
+    descriptor: ()I
+
+  public final long getMaxUnitNanos();
+    descriptor: ()J
+
+  public final int getPendingCount();
+    descriptor: ()I
+
+  public final io.github.jichuo1.meguviz.ui.prewarm.PrewarmSubmission submit(io.github.jichuo1.meguviz.ui.prewarm.PrewarmWork);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmWork;)Lio/github/jichuo1/meguviz/ui/prewarm/PrewarmSubmission;
+
+  public final void cancel();
+    descriptor: ()V
+
+  public final void onDetached();
+    descriptor: ()V
+
+  public final void onLowMemory();
+    descriptor: ()V
+
+  public final void onResourcesChanged();
+    descriptor: ()V
+
+  public final boolean checkScheduler();
+    descriptor: ()Z
+
+  public void close();
+    descriptor: ()V
+}
+
+public final class io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer$Companion {
+  public final io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer attach(io.github.jichuo1.meguviz.ui.UiSession, int, int, long);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/UiSession;IIJ)Lio/github/jichuo1/meguviz/ui/prewarm/UiPrewarmer;
+
+  public static io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer attach$default(io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer$Companion, io.github.jichuo1.meguviz.ui.UiSession, int, int, long, int, java.lang.Object);
+    descriptor: (Lio/github/jichuo1/meguviz/ui/prewarm/UiPrewarmer$Companion;Lio/github/jichuo1/meguviz/ui/UiSession;IIJILjava/lang/Object;)Lio/github/jichuo1/meguviz/ui/prewarm/UiPrewarmer;
+
+  public io.github.jichuo1.meguviz.ui.prewarm.UiPrewarmer$Companion(kotlin.jvm.internal.DefaultConstructorMarker);
+    descriptor: (Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+}

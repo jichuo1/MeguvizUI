@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Meguviz P2 Consumer</string>
+    <string name="generated_label">Generated label from published artifacts</string>
+    <string name="plan_label">Plan label</string>
+</resources>

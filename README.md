@@ -35,6 +35,8 @@
 | `ui-android-bridge` | `meguviz-ui-android-bridge` | 对接窗口生命周期、资源权威与同一帧驱动 |
 | `ui-testkit` | 不发布 | 合同测试支持 |
 
+动态计划、KSP 生成器、RecyclerView、文本预计算、原生行布局和预热均为默认关闭的可选能力，见 [P2 使用说明](docs/p2.md)。
+
 <a id="quick-start"></a>
 
 ## 🚀 快速开始
@@ -98,6 +100,7 @@ session.close()
 - [安装与接入](docs/installation.md)
 - [核心合同](docs/contracts.md)
 - [可选桥与依赖边界](docs/bridges.md)
+- [P2 可选能力](docs/p2.md)
 - [构建、验证与贡献](docs/development.md)
 - [公开 API 基线](api/public-api.txt) · [编译夹具](integration/compile-fixtures)
 

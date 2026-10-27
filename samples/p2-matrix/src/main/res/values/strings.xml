@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">P2 matrix</string>
+    <string name="title">P2 behavior matrix</string>
+    <string name="plan_first">Plan row one</string>
+    <string name="plan_second">Plan row two</string>
+    <string name="generated_label">Generated label</string>
+    <string name="row_label">Wi-Fi</string>
+    <string name="row_action">Edit</string>
+    <string name="row_second_label">Bluetooth with a longer label</string>
+    <string name="row_second_action">Pair</string>
+    <string name="open_page">Open page</string>
+    <string name="page_row">Page row %1$d</string>
+    <string name="item_label">Row %1$d</string>
+    <string name="item_on">On</string>
+    <string name="item_off">Off</string>
+    <string name="item_toggle">Toggle row %1$d</string>
+    <string name="long_text">Settings synchronization keeps your preferences in step across devices. يتم مزامنة الإعدادات بين الأجهزة تلقائيا. Network, storage, display, privacy and notification preferences are combined into one readable summary so that a long label wraps over several lines and exercises precomputed text measurement with mixed direction content. الخصوصية والإشعارات والتخزين.</string>
+</resources>

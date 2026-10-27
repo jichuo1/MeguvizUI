@@ -28,7 +28,7 @@ jobs:
           printf 'sdk.dir=%s\n' "$ANDROID_HOME" > local.properties
           chmod +x gradlew
       - name: Verify host and compile instrumentation
-        run: ./gradlew -PenableRef=true verifyHost :samples:standalone:assembleDebugAndroidTest --no-daemon --max-workers=2
+        run: ./gradlew -PenableRef=true -PenableP2=true verifyHost verifyP2 :samples:standalone:assembleDebugAndroidTest --no-daemon --max-workers=2
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:

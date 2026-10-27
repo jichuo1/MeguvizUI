@@ -1,8 +1,12 @@
 [versions]
 agp = "9.4.1"
 kotlin = "2.4.21"
+ksp = "2.3.12"
+recyclerview = "1.4.0"
 junit = "4.13.2"
 appcompat = "1.8.0"
+# The optional Lumen bridge is verified against this explicitly approved version.
+#noinspection GradleDependency,NewerVersionAvailable
 lumen = "1.5.5"
 meguviz-ref = "1.0.0"
 # This candidate is explicitly approved and SHA-pinned in upstream-candidates.toml.
@@ -12,6 +16,8 @@ meguviz-upstream = "0.1.0-SNAPSHOT"
 [libraries]
 junit = { module = "junit:junit", version.ref = "junit" }
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "ksp" }
 lumen-engine = { module = "com.github.jichuo1.LumenCoacervationEngine:lumen-engine", version.ref = "lumen" }
 meguviz-ref-core = { module = "io.github.jichuo1.meguviz:meguviz-ref-core", version.ref = "meguviz-ref" }
 meguviz-android-runtime = { module = "io.github.jichuo1.meguviz:meguviz-android-runtime", version.ref = "meguviz-upstream" }
@@ -21,3 +27,5 @@ meguviz-android-window = { module = "io.github.jichuo1.meguviz:meguviz-android-w
 android-library = { id = "com.android.library", version.ref = "agp" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

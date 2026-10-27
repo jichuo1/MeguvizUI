@@ -1,0 +1,56 @@
+# Design thresholds chosen before measurement; this file is part of the source fingerprint.
+# Statistics (reviewed 2026-10-27):
+# - paired-ratio: r_i = B_i / A_i for the A and B samples of the same ABBA iteration; the
+#   point estimate is median(r) and the CI resamples pairs. Shared device drift (frequency or
+#   core migration) cancels within a pair; ABBA alternation balances first-position bias.
+# - median-ratio: median(B) / median(A) with groups resampled independently.
+# bounded-overhead: admitted when the bootstrap 95% CI upper bound <= max_ratio.
+# benefit: admitted only when that upper bound is < max_ratio.
+# Changing a threshold or statistic is a reviewed design decision, never a way to turn a run green.
+schema_version = 2
+minimum_samples = 300
+bootstrap_resamples = 2000
+bootstrap_seed = 20261027
+max_thermal_status = 1
+
+[profiles.plan]
+statistic = "paired-ratio"
+scenario = "48-node-page-construction"
+kind = "bounded-overhead"
+max_ratio = 1.25
+reason = "UiPlan serves dynamic configuration; its pipeline must not cost much more than the equivalent direct DSL page."
+
+[profiles.codegen]
+statistic = "paired-ratio"
+scenario = "64-view-registry-mount"
+kind = "bounded-overhead"
+max_ratio = 1.10
+reason = "Generated registrations replace hand-written ones and must cost the same at runtime."
+
+[profiles.recycler]
+statistic = "median-ratio"
+scenario = "16-submission-burst-2000-items"
+kind = "benefit"
+max_ratio = 0.90
+reason = "Latest-only diffing is admitted only if a submission burst reaches the final list sooner than the official ListAdapter."
+
+[profiles.text]
+statistic = "median-ratio"
+scenario = "3000-char-plain-label-apply"
+kind = "benefit"
+max_ratio = 0.90
+reason = "Precomputation is admitted only if it reduces main-thread apply, measure and layout time for long labels."
+
+[profiles.layouts]
+statistic = "paired-ratio"
+scenario = "8-row-construct-measure-layout"
+kind = "bounded-overhead"
+max_ratio = 1.10
+reason = "nativeRow claims no speedup; it must not be slower than the equivalent horizontal LinearLayout."
+
+[profiles.prewarm]
+statistic = "median-ratio"
+scenario = "48-row-page-first-switch"
+kind = "benefit"
+max_ratio = 0.50
+reason = "Prewarming is admitted only if it at least halves main-thread work in the first switch frame."
