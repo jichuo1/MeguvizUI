@@ -7,6 +7,7 @@
 布局类型约束 · 属性所有权 · 状态与命令 · 会话生命周期
 
 [![CI](https://github.com/jichuo1/MeguvizUI/actions/workflows/verify.yml/badge.svg)](https://github.com/jichuo1/MeguvizUI/actions/workflows/verify.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.jichuo1.meguviz/meguviz-ui-widgets)](https://central.sonatype.com/artifact/io.github.jichuo1.meguviz/meguviz-ui-widgets)
 ![JVM 17](https://img.shields.io/badge/JVM-17-blue)
 ![Android API 27+](https://img.shields.io/badge/Android-API%2027%2B-3DDC84)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue)](LICENSE)
@@ -26,24 +27,46 @@
 
 ## 📦 模块
 
-| 模块 | Maven artifactId | 职责 |
-| --- | --- | --- |
-| `ui-core` | `meguviz-ui-core` | 会话、引用、属性、调度、恢复与扩展合同 |
-| `ui-widgets` | `meguviz-ui-widgets` | Framework 工厂、父布局作用域、尺寸与常用属性 |
-| `ui-lumen-bridge` | `meguviz-ui-lumen-bridge` | 将视觉属性所有权交给 Lumen |
-| `ui-ref-bridge` | `meguviz-ui-ref-bridge` | 对接真实 Ref 构造与调用计划 |
-| `ui-android-bridge` | `meguviz-ui-android-bridge` | 对接窗口生命周期、资源权威与同一帧驱动 |
-| `ui-testkit` | 不发布 | 合同测试支持 |
+| 模块 | Maven artifactId | Central | 职责 |
+| --- | --- | --- | --- |
+| `ui-core` | `meguviz-ui-core` | ✅ | 会话、引用、属性、调度、恢复与扩展合同 |
+| `ui-widgets` | `meguviz-ui-widgets` | ✅ | Framework 工厂、父布局作用域、尺寸与常用属性 |
+| `ui-ref-bridge` | `meguviz-ui-ref-bridge` | ✅ | 对接真实 Ref 构造与调用计划 |
+| `ui-lumen-bridge` | `meguviz-ui-lumen-bridge` | 未发布 | 将视觉属性所有权交给 Lumen |
+| `ui-android-bridge` | `meguviz-ui-android-bridge` | 未发布 | 对接窗口生命周期、资源权威与同一帧驱动 |
+| `ui-testkit` | 不发布 | — | 合同测试支持 |
 
-动态计划、KSP 生成器、RecyclerView、文本预计算、原生行布局和预热均为默认关闭的可选能力，见 [P2 使用说明](docs/p2.md)。
+可选 P2 模块均默认关闭，需显式启用，已随 1.0.0 发布到 Central，详见 [P2 使用说明](docs/p2.md)：
+
+| 模块 | Maven artifactId | 用途 |
+| --- | --- | --- |
+| `ui-plan` | `meguviz-ui-plan` | 纯数据计划，分期验证、解析、绑定、挂载 |
+| `ui-codegen-api` / `ui-codegen` | `meguviz-ui-codegen-api` / `meguviz-ui-codegen` | KSP 根据显式声明生成直接工厂与 registry 注册入口 |
+| `ui-recycler` | `meguviz-ui-recycler` | 可选 RecyclerView 绑定 |
+| `ui-text` | `meguviz-ui-text` | 长文本预计算 |
+| `ui-layouts` | `meguviz-ui-layouts` | 受限原生横向行 |
+| `ui-prewarm` | `meguviz-ui-prewarm` | 可取消的有界主线程预热 |
+
+Lumen 与 Android 两个桥的上游尚未发布到 Maven Central，因此暂不在 Central 提供。
 
 <a id="quick-start"></a>
 
 ## 🚀 快速开始
 
-当前版本为 **`1.0.0` 源码版本**，尚未发布到 Maven Central，尚无历史稳定版兼容证明。API 27 是声明的最低版本；完整设备、无障碍及性能矩阵尚未完成。
+当前版本为 **`1.0.0`**，已发布到 Maven Central（groupId `io.github.jichuo1.meguviz`）。尚无历史稳定版兼容证明。API 27 是声明的最低版本；发布门禁 `release` 仍为 blocked：核心设备矩阵、R8 后设备行为、真人 TalkBack、第二家厂商等尚未验收，完整设备、无障碍及性能矩阵尚未完成。
 
-准备 JDK 17、Android SDK 37 与 Build Tools 37.0.0，在未提交的 `local.properties` 中配置 `sdk.dir`，然后构建核心、控件与两个示例：
+普通应用依赖 `meguviz-ui-widgets` 即可，它会传递依赖 core：
+
+```kotlin
+dependencies {
+    implementation("io.github.jichuo1.meguviz:meguviz-ui-widgets:1.0.0")
+    // 可选：Ref 桥与 P2 模块按需添加，例如
+    // implementation("io.github.jichuo1.meguviz:meguviz-ui-ref-bridge:1.0.0")
+    // implementation("io.github.jichuo1.meguviz:meguviz-ui-recycler:1.0.0")
+}
+```
+
+从源码构建需要 JDK 17、Android SDK 37 与 Build Tools 37.0.0，在未提交的 `local.properties` 中配置 `sdk.dir`，然后构建核心、控件与两个示例：
 
 ```sh
 git clone https://github.com/jichuo1/MeguvizUI.git
@@ -51,7 +74,7 @@ cd MeguvizUI
 ./gradlew verifyHost publishCandidate --no-daemon --max-workers=2
 ```
 
-Windows 使用 `gradlew.bat`；本地 Maven 候选写入 `build/repo/`。普通应用依赖 `meguviz-ui-widgets` 即可，具体接入与可选桥准备见 [安装说明](docs/installation.md)。
+Windows 使用 `gradlew.bat`；本地 Maven 候选写入 `build/repo/`。可选桥准备见 [安装说明](docs/installation.md)。
 
 <a id="examples"></a>
 

@@ -10,9 +10,22 @@
 ./gradlew verifyHost publishCandidate --no-daemon --max-workers=2
 ```
 
+## 通过 Maven Central 消费
+
+`1.0.0` 已发布到 Maven Central，groupId 为 `io.github.jichuo1.meguviz`。普通应用只需依赖 widgets，它会传递依赖 core：
+
+```kotlin
+// 消费模块的 build.gradle.kts
+dependencies {
+    implementation("io.github.jichuo1.meguviz:meguviz-ui-widgets:1.0.0")
+}
+```
+
+不需要额外引入 Ref、Android 窗口运行时或 Lumen。已发布的 artifactId：`meguviz-ui-core`、`meguviz-ui-widgets`、`meguviz-ui-ref-bridge`，以及可选 P2 模块 `meguviz-ui-plan`、`meguviz-ui-recycler`、`meguviz-ui-text`、`meguviz-ui-layouts`、`meguviz-ui-prewarm`、`meguviz-ui-codegen-api`、`meguviz-ui-codegen`。`meguviz-ui-lumen-bridge` 与 `meguviz-ui-android-bridge` 的上游尚未发布到 Maven Central，暂不在 Central 提供。已发布的版本不会以不同内容覆盖。
+
 ## 通过本地 Maven 消费
 
-当前没有 Maven Central 稳定发行版。构建生成的 Maven 仓库位于源码根目录的 `build/repo/`，消费项目需显式指向自己的实际目录：
+用于验证未发布的源码改动。构建生成的 Maven 仓库位于源码根目录的 `build/repo/`，消费项目需显式指向自己的实际目录：
 
 ```kotlin
 // 消费项目的 settings.gradle.kts
@@ -23,14 +36,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-// 消费模块的 build.gradle.kts
-dependencies {
-    implementation("io.github.jichuo1.meguviz:meguviz-ui-widgets:1.0.0")
-}
 ```
 
-将 `meguvizUiRepository` 设置为生成仓库的路径。widgets 传递依赖 core；不需要额外引入 Ref、Android 窗口运行时或 Lumen。正式发布的版本不应以不同内容覆盖；这里的本地仓库用于发布前验证。
+将 `meguvizUiRepository` 设置为生成仓库的路径，依赖写法同上。
 
 ## 示例与主题
 
